@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary & Secondary */
+  --color-primary: #BBE2D4;
+  --color-secondary: #48A84B;
+
+  /* Colors */
+  --color-primary-dark: #2d7a3e;
+  --color-accent-gold: #48A84B;
+  --color-light-bg: #BBE2D4;
+  --color-text-dark: #1a4d2e;
+  --color-hover-accent: #5bb85e;
+
+  /* Brand – secondary = 48A84B, primary = BBE2D4 */
+  --color-brand-dark: #2d7a3e;
+  --color-brand: #48A84B;
+  --color-brand-light: #BBE2D4;
+  --color-brand-muted: #d4ede6;
+  --color-brand-mid: #5bb85e;
+
+  /* Font families – professional: Raleway headings, Open Sans body */
+  --font-heading: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --font-alt: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
