@@ -1,3 +1,5 @@
+import AnimateOnView from './AnimateOnView'
+
 const WHATSAPP_LINK = 'https://wa.me/918939555025'
 
 const PROJECTS = [
@@ -10,15 +12,18 @@ const PROJECTS = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="bg-white py-16 md:py-24">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-dark text-center mb-4">
-          Our Projects
-        </h2>
-        <p className="font-body text-text-dark/80 text-center max-w-2xl mx-auto mb-12">
-          Quality residential projects across Chennai with modern design and timely delivery.
-        </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section id="projects" className="bg-white py-12 sm:py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <AnimateOnView animation="fade-up">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark text-center mb-3 sm:mb-4">
+            Our Projects
+          </h2>
+          <p className="font-body text-text-dark/80 text-center max-w-2xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base px-1">
+            Quality residential projects across Chennai with modern design and timely delivery.
+          </p>
+        </AnimateOnView>
+        <AnimateOnView animation="fade-up" delay={80}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {PROJECTS.map((project) => (
             <div
               key={`${project.name}-${project.location}`}
@@ -45,8 +50,8 @@ export default function ProjectsSection() {
                   />
                 </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-heading text-xl font-semibold text-text-dark">
+              <div className="p-4 sm:p-5">
+                <h3 className="font-heading text-lg sm:text-xl font-semibold text-text-dark">
                   {project.name}
                 </h3>
                 <p className="mt-1 font-body text-sm text-text-dark/70 flex items-center gap-2">
@@ -72,7 +77,8 @@ export default function ProjectsSection() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        </AnimateOnView>
       </div>
     </section>
   )

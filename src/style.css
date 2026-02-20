@@ -26,3 +26,30 @@
   --font-script: "Great Vibes", cursive;
   --font-alt: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Light scroll animations for home sections */
+@keyframes home-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes home-fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes home-word-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-home-fade-in {
+  animation: home-fade-in 0.5s ease-out both;
+}
+.animate-home-fade-in-up {
+  animation: home-fade-in-up 0.5s ease-out both;
+}
+.animate-home-word-in {
+  animation: home-word-in 0.4s ease-out both;
+}
+.animate-home-initial {
+  opacity: 0;
+}

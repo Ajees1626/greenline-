@@ -24,7 +24,9 @@ function BuildersIcon({ className = 'w-12 h-12' }) {
   )
 }
 
-export default function AboutSection() {
+const WHATSAPP_LINK = 'https://wa.me/918939555025'
+
+export default function AboutSection({ isAboutPage } = {}) {
   const sectionRef = useRef(null)
   const textRef = useRef(null)
   const imagesRef = useRef(null)
@@ -44,9 +46,9 @@ export default function AboutSection() {
   }, [])
 
   return (
-    <section id="about" ref={sectionRef} className="bg-white py-16 md:py-24 overflow-hidden">
+    <section id="about" ref={sectionRef} className="bg-white py-12 sm:py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
           {/* Left: text with letter/line animation */}
           <div
             ref={textRef}
@@ -57,7 +59,7 @@ export default function AboutSection() {
             <p className="font-body text-sm font-semibold text-brand uppercase tracking-wider mb-2">
               Who We Are
             </p>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-4xl font-bold text-text-dark">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark">
               Building With Purpose, Delivering With Care
             </h2>
             <p className="mt-6 text-text-dark/80 font-body leading-relaxed text-base sm:text-lg">
@@ -84,12 +86,23 @@ export default function AboutSection() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/about"
-              className="mt-8 inline-flex items-center px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors duration-300"
-            >
-              More About Us
-            </Link>
+            {isAboutPage ? (
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 sm:mt-8 inline-flex items-center min-h-[44px] px-5 sm:px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors duration-300"
+              >
+                Contact Us
+              </a>
+            ) : (
+              <Link
+                to="/about"
+                className="mt-6 sm:mt-8 inline-flex items-center min-h-[44px] px-5 sm:px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors duration-300"
+              >
+                More About Us
+              </Link>
+            )}
           </div>
 
           {/* Right: 4 images 2x2 grid, center round builders icon with animation */}

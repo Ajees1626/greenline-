@@ -85,38 +85,47 @@ export default function StatsSection() {
   }, [inView])
 
   return (
-    <section ref={sectionRef} className="bg-primary py-16 md:py-20" aria-label="Key statistics">
+    <section ref={sectionRef} className="bg-primary py-10 sm:py-14 md:py-20" aria-label="Key statistics">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-text-dark text-center max-w-xl mx-auto leading-tight">
+        <h2
+          className={`font-heading text-xl sm:text-2xl md:text-3xl font-bold text-text-dark text-center max-w-xl mx-auto leading-tight px-1 ${
+            inView ? 'animate-home-fade-in-up' : 'animate-home-initial'
+          }`}
+        >
           Delivering Quality Projects with Trust and Timely Commitment
         </h2>
 
-        <div className="mt-14 flex flex-col sm:flex-row sm:divide-x sm:divide-gray-200">
+        <div
+          className={`mt-10 sm:mt-14 flex flex-col sm:flex-row sm:divide-x sm:divide-gray-200/80 sm:items-stretch ${
+            inView ? 'animate-home-fade-in-up' : 'animate-home-initial'
+          }`}
+          style={inView ? { animationDelay: '0.12s', animationFillMode: 'backwards' } : undefined}
+        >
           {STATS.map(({ label, value, suffix, icon }, i) => (
             <div
               key={label}
-              className="flex flex-col items-center text-center py-6 sm:py-0 sm:flex-1 sm:px-8 first:pt-0 last:pb-0 sm:first:pt-8 sm:last:pb-8"
+              className="flex flex-col items-center justify-center text-center py-6 sm:py-8 md:py-10 sm:flex-1 sm:px-4 md:px-6 lg:px-10"
             >
               <div
-                className="flex items-center justify-center w-11 h-11 rounded-full bg-secondary/15 text-secondary mb-4"
+                className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary/15 text-secondary mb-3 sm:mb-4 shrink-0"
                 aria-hidden
               >
                 <StatIcon icon={icon} className="w-5 h-5" />
               </div>
               <p
-                className="font-heading text-4xl sm:text-5xl font-bold text-text-dark tabular-nums tracking-tight"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-text-dark tabular-nums tracking-tight"
                 aria-label={`${value}${suffix} ${label}`}
               >
                 {displayValues[i]}{suffix}
               </p>
-              <p className="mt-2 text-sm font-medium text-gray-600 max-w-40">
+              <p className="mt-2 text-sm font-medium text-gray-600 max-w-44 mx-auto">
                 {label}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-14 mx-auto w-16 h-1 rounded-full bg-secondary/40" aria-hidden />
+        <div className="mt-10 sm:mt-14 mx-auto w-12 sm:w-16 h-1 rounded-full bg-secondary/40" aria-hidden />
       </div>
     </section>
   )

@@ -1,0 +1,148 @@
+{
+  "projects": [
+    {
+      "id": "lakshmi-nagar-pozhichalur",
+      "slug": "lakshmi-nagar-pozhichalur",
+      "name": "Lakshmi Nagar",
+      "type": "Individual Villa",
+      "location": "Pozhichalur",
+      "status": "completed",
+      "image": "https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg",
+      "shortDesc": "Premium individual villas with modern design and quality construction.",
+      "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+      "heroTitle": "Lakshmi Nagar",
+      "heroSubtitle": "Individual villas at Pozhichalur — completed and handed over.",
+      "paragraph1": "Lakshmi Nagar is our completed residential project at Pozhichalur, offering individual villas built with a focus on space, ventilation, and modern finishes. Each unit was delivered on time with strict quality checks and client satisfaction.",
+      "paragraph2": "The project includes well-planned layouts, strong foundations, and amenities suited for family living. Greenline Developers managed end-to-end construction and handover, with many families already moved in.",
+      "highlights": [
+        "Individual villa units",
+        "Modern design and finishes",
+        "On-time handover",
+        "Pozhichalur location",
+        "Quality construction"
+      ],
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "contactPhone": "+91 89395 55025"
+    },
+    {
+      "id": "venkateshwara-nagar",
+      "slug": "venkateshwara-nagar",
+      "name": "Venkateshwara Nagar",
+      "type": "2BHK & 3BHK",
+      "location": "Pozhichalur",
+      "status": "ongoing",
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600",
+      "shortDesc": "2BHK and 3BHK apartments with contemporary design and timely delivery.",
+      "heroImage": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920",
+      "heroTitle": "Venkateshwara Nagar",
+      "heroSubtitle": "2BHK & 3BHK apartments — under construction at Pozhichalur.",
+      "paragraph1": "Venkateshwara Nagar is our ongoing residential project offering 2BHK and 3BHK apartments. Construction is progressing on schedule with regular updates to investors and buyers. The design prioritizes natural light, ventilation, and efficient use of space.",
+      "paragraph2": "We are using quality materials and following approved structural and safety standards. Expected completion and handover timelines are communicated clearly to all stakeholders.",
+      "highlights": [
+        "2BHK and 3BHK options",
+        "Under construction",
+        "Pozhichalur",
+        "Transparent progress updates",
+        "Quality materials"
+      ],
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "contactPhone": "+91 89395 55025"
+    },
+    {
+      "id": "lakshmi-nagar-1bhk-2bhk",
+      "slug": "lakshmi-nagar-1bhk-2bhk",
+      "name": "Lakshmi Nagar (1BHK & 2BHK)",
+      "type": "1BHK & 2BHK",
+      "location": "Pozhichalur",
+      "status": "completed",
+      "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600",
+      "shortDesc": "Affordable 1BHK and 2BHK units for first-time buyers and families.",
+      "heroImage": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920",
+      "heroTitle": "Lakshmi Nagar — 1BHK & 2BHK",
+      "heroSubtitle": "Completed apartment project at Pozhichalur.",
+      "paragraph1": "This project delivered 1BHK and 2BHK apartments aimed at first-time homebuyers and small families. Units were built with efficient layouts and durable construction, and the project was completed and handed over as planned.",
+      "paragraph2": "Residents benefit from a well-connected location in Pozhichalur and quality construction that Greenline is known for. Many units are already occupied and feedback has been positive.",
+      "highlights": [
+        "1BHK and 2BHK units",
+        "Completed project",
+        "Pozhichalur",
+        "First-time buyer friendly",
+        "Handover done"
+      ],
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "contactPhone": "+91 89395 55025"
+    },
+    {
+      "id": "karaima-nagar",
+      "slug": "karaima-nagar",
+      "name": "Karaima Nagar",
+      "type": "2BHK & 3BHK",
+      "location": "Karaima Nagar",
+      "status": "ongoing",
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600",
+      "shortDesc": "2BHK and 3BHK apartments in Karaima Nagar with modern amenities.",
+      "heroImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920",
+      "heroTitle": "Karaima Nagar",
+      "heroSubtitle": "2BHK & 3BHK apartments — under construction.",
+      "paragraph1": "Karaima Nagar is an ongoing project offering 2BHK and 3BHK apartments. The project is being built with a focus on structural strength, modern design, and timely completion. We keep buyers and investors informed with regular progress updates.",
+      "paragraph2": "The location offers good connectivity and the layouts are designed for comfort and functionality. Construction is on track and we are committed to delivering as per the announced timeline.",
+      "highlights": [
+        "2BHK and 3BHK",
+        "Ongoing construction",
+        "Karaima Nagar",
+        "Regular updates",
+        "Modern amenities"
+      ],
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "contactPhone": "+91 89395 55025"
+    },
+    {
+      "id": "annai-therasa-nagar",
+      "slug": "annai-therasa-nagar",
+      "name": "Annai Therasa Nagar",
+      "type": "2BHK & 3BHK",
+      "location": "Kundrathur",
+      "status": "upcoming",
+      "image": "https://greenlinedevelopers.in/wp-content/uploads/2025/09/real-estate-sale-and-happy-family-outside-of-new-house-excited-and-smiling-in-a-garden-property-.jpg",
+      "shortDesc": "Upcoming 2BHK and 3BHK project at Kundrathur — register your interest.",
+      "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+      "heroTitle": "Annai Therasa Nagar",
+      "heroSubtitle": "Upcoming 2BHK & 3BHK project at Kundrathur.",
+      "paragraph1": "Annai Therasa Nagar is our upcoming residential project at Kundrathur. We are offering 2BHK and 3BHK apartments with plans for modern design, quality construction, and clear timelines. Registration and early enquiries are open.",
+      "paragraph2": "Interested buyers can get in touch for layout options, approximate pricing, and expected launch details. We will keep you updated as the project moves forward.",
+      "highlights": [
+        "2BHK and 3BHK",
+        "Upcoming project",
+        "Kundrathur",
+        "Early registration open",
+        "Modern design planned"
+      ],
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "contactPhone": "+91 89395 55025"
+    },
+    {
+      "id": "nehru-nagar",
+      "slug": "nehru-nagar",
+      "name": "Nehru Nagar",
+      "type": "Residential",
+      "location": "Chennai",
+      "status": "upcoming",
+      "image": "https://greenlinedevelopers.in/wp-content/uploads/2025/09/young-couple-holding-tablet-with-advertisement-of-real-estate-on-sale.jpg",
+      "shortDesc": "New residential project in Chennai — details and launch coming soon.",
+      "heroImage": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920",
+      "heroTitle": "Nehru Nagar",
+      "heroSubtitle": "Residential project — coming soon in Chennai.",
+      "paragraph1": "Nehru Nagar is a planned residential project in Chennai. We are in the planning and approval stage and will share detailed layouts, unit options, and launch dates soon. Enquire now to stay updated.",
+      "paragraph2": "Greenline Developers is committed to bringing quality housing to this location with the same standards of construction and transparency that our completed projects are known for.",
+      "highlights": [
+        "Residential project",
+        "Coming soon",
+        "Chennai",
+        "Enquiries open",
+        "Quality construction"
+      ],
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "contactPhone": "+91 89395 55025"
+    }
+  ]
+}

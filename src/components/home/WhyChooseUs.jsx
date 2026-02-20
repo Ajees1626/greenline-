@@ -1,3 +1,5 @@
+import AnimateOnView from './AnimateOnView'
+
 const ITEMS = [
   {
     title: 'Architectural Design',
@@ -53,29 +55,32 @@ function Icon({ icon, className }) {
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-light-bg py-16 md:py-24" aria-labelledby="why-choose-heading">
+    <section className="bg-light-bg py-12 sm:py-16 md:py-24" aria-labelledby="why-choose-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <header className="max-w-2xl">
-          <p className="font-body text-sm font-semibold text-brand uppercase tracking-widest mb-3">
-            Why Choose us
-          </p>
-          <h2 id="why-choose-heading" className="font-heading text-3xl sm:text-4xl font-bold text-text-dark leading-tight">
-            We Build With Quality, Trust, and Care
-          </h2>
-          <div className="mt-4 h-1 w-14 rounded-full bg-brand/60" aria-hidden />
-          <p className="mt-6 font-body text-text-dark/80 text-base leading-relaxed">
-            At <strong className="text-text-dark">Greenline Developers</strong>, our promise is simple—to deliver strong, sustainable, and well-crafted homes & apartments that families can rely on for generations.
-          </p>
-        </header>
+        <AnimateOnView animation="fade-up">
+          <header className="max-w-2xl">
+            <p className="font-body text-xs sm:text-sm font-semibold text-brand uppercase tracking-widest mb-2 sm:mb-3">
+              Why Choose us
+            </p>
+            <h2 id="why-choose-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark leading-tight">
+              We Build With Quality, Trust, and Care
+            </h2>
+            <div className="mt-4 h-1 w-14 rounded-full bg-brand/60" aria-hidden />
+            <p className="mt-6 font-body text-text-dark/80 text-base leading-relaxed">
+              At <strong className="text-text-dark">Greenline Developers</strong>, our promise is simple—to deliver strong, sustainable, and well-crafted homes & apartments that families can rely on for generations.
+            </p>
+          </header>
+        </AnimateOnView>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <AnimateOnView animation="fade-up" delay={100}>
+        <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
           {ITEMS.map(({ title, desc, icon }) => (
             <article
               key={title}
-              className="group relative bg-white rounded-xl border border-brand/10 p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand/25 hover:-translate-y-0.5"
+              className="group relative bg-white rounded-xl border border-brand/10 p-4 sm:p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand/25 hover:-translate-y-0.5"
             >
-              <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-xl bg-brand/15 text-brand flex items-center justify-center group-hover:bg-brand/25 transition-colors duration-300">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand/15 text-brand flex items-center justify-center group-hover:bg-brand/25 transition-colors duration-300">
                   <Icon icon={icon} />
                 </div>
                 <div className="min-w-0">
@@ -90,6 +95,7 @@ export default function WhyChooseUs() {
             </article>
           ))}
         </div>
+        </AnimateOnView>
       </div>
     </section>
   )

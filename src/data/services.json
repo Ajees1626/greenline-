@@ -1,0 +1,112 @@
+{
+  "services": [
+    {
+      "id": "residential-construction",
+      "slug": "residential-construction",
+      "title": "Residential Construction",
+      "shortDesc": "End-to-end construction with strong foundations and finishes for homes and apartments.",
+      "image": "https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg",
+      "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+      "heroTitle": "Residential Construction",
+      "heroSubtitle": "From foundation to handover — we build homes that last.",
+      "paragraph1": "At Greenline Developers, we deliver end-to-end residential construction with a focus on structural strength, quality materials, and timely execution. Whether you need a villa, an apartment, or a custom home, our team manages every stage from blueprint to handover.",
+      "paragraph2": "We use proven construction practices and trusted materials to ensure durability and comfort. Our transparent processes and regular updates keep you informed at every step, making the journey to your dream home smooth and stress-free.",
+      "listItems": [
+        "Villas and individual homes",
+        "Apartments and multi-unit buildings",
+        "Strong foundations and structural work",
+        "Quality finishes and modern fittings",
+        "On-time delivery with clear timelines"
+      ],
+      "contactSummary": "Get a free consultation for your residential project. Share your requirements and we will provide a detailed plan and quote.",
+      "contactPhone": "+91 89395 55025",
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "qa": [
+        { "question": "How long does a typical home construction take?", "answer": "Depending on scope, most residential projects are completed within 12–24 months. We provide a clear timeline at the start." },
+        { "question": "Do you provide design and architecture?", "answer": "Yes. We offer architectural design and planning as part of our end-to-end service." },
+        { "question": "What areas do you serve?", "answer": "We primarily serve Chennai and surrounding regions, with a focus on Pozhichalur, Kundrathur, and nearby localities." }
+      ]
+    },
+    {
+      "id": "architectural-design",
+      "slug": "architectural-design",
+      "title": "Architectural Design",
+      "shortDesc": "Smart architectural planning and space optimization tailored to your needs.",
+      "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600",
+      "heroImage": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920",
+      "heroTitle": "Architectural Design",
+      "heroSubtitle": "Plans that blend beauty, function, and efficiency.",
+      "paragraph1": "Our architectural design service focuses on creating spaces that are both visually appealing and highly functional. We work with you to understand your lifestyle, plot constraints, and budget, then deliver plans that optimize every square foot.",
+      "paragraph2": "From initial concept to detailed drawings and approvals, we guide you through the process. We use modern design principles and sustainable options where possible, so your home is ready for the future.",
+      "listItems": [
+        "2D and 3D conceptual designs",
+        "Space planning and optimization",
+        "Vastu and compliance considerations",
+        "Material and finish recommendations",
+        "Approval and documentation support"
+      ],
+      "contactSummary": "Discuss your plot and requirements with our design team. We offer initial consultations to outline options and feasibility.",
+      "contactPhone": "+91 89395 55025",
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "qa": [
+        { "question": "Do you design for existing plots only?", "answer": "We design for both existing plots and new acquisitions. Share your plot details and we can propose options." },
+        { "question": "Can you modify existing plans?", "answer": "Yes. We can adapt or modify plans to suit your changing needs or site conditions." },
+        { "question": "What deliverables do I get?", "answer": "You receive conceptual layouts, working drawings, and documentation needed for approvals, as per your package." }
+      ]
+    },
+    {
+      "id": "contracting-services",
+      "slug": "contracting-services",
+      "title": "Contracting Services",
+      "shortDesc": "Reliable project management with precise material sourcing and execution.",
+      "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600",
+      "heroImage": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920",
+      "heroTitle": "Contracting Services",
+      "heroSubtitle": "Professional project management and execution.",
+      "paragraph1": "Our contracting services cover project management, material sourcing, and on-site execution. We work with trusted suppliers and skilled labour to ensure quality and timely completion without compromising on standards.",
+      "paragraph2": "Whether you have your own design or need support with design-build, we coordinate all trades, schedules, and inspections. You get a single point of contact and clear reporting, so you can focus on your priorities while we handle the build.",
+      "listItems": [
+        "Full project management",
+        "Material sourcing and quality checks",
+        "Labour and contractor coordination",
+        "Schedule and progress tracking",
+        "Quality and safety oversight"
+      ],
+      "contactSummary": "Share your project scope and timeline. We will provide a contracting proposal and clarify roles and deliverables.",
+      "contactPhone": "+91 89395 55025",
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "qa": [
+        { "question": "Can you take over an ongoing project?", "answer": "In many cases, yes. We assess the current status and can propose how to complete the remaining work." },
+        { "question": "Do you work with client-provided materials?", "answer": "We can work with materials you supply or source everything ourselves. We recommend a clear scope to avoid gaps." },
+        { "question": "How is billing structured?", "answer": "We typically work on a fixed scope with milestones or time-and-material, depending on project type. This is outlined in the agreement." }
+      ]
+    },
+    {
+      "id": "sustainable-building",
+      "slug": "sustainable-building",
+      "title": "Sustainable Building",
+      "shortDesc": "Eco-friendly methods for healthier, future-ready living spaces.",
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600",
+      "heroImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920",
+      "heroTitle": "Sustainable Building",
+      "heroSubtitle": "Building greener for a better tomorrow.",
+      "paragraph1": "We integrate sustainable practices into our construction — from material choices and energy-efficient design to waste reduction and better indoor air quality. Our goal is to deliver homes that are comfortable today and responsible for the environment.",
+      "paragraph2": "Sustainable building does not mean compromising on strength or aesthetics. We use proven green materials and methods that meet local codes and your expectations, so your home is durable, efficient, and easier to maintain.",
+      "listItems": [
+        "Energy-efficient design and orientation",
+        "Eco-friendly and low-VOC materials",
+        "Rainwater and resource efficiency",
+        "Better ventilation and natural light",
+        "Long-term durability and low maintenance"
+      ],
+      "contactSummary": "Interested in a sustainable build? We can outline options and cost implications for your project size and location.",
+      "contactPhone": "+91 89395 55025",
+      "contactWhatsApp": "https://wa.me/918939555025",
+      "qa": [
+        { "question": "Is sustainable building more expensive?", "answer": "Initial cost can be slightly higher for some options, but savings on energy and maintenance often offset this over time." },
+        { "question": "What certifications do you support?", "answer": "We can align with green building principles and work toward certification if you have a specific target." },
+        { "question": "Can existing plans be made more sustainable?", "answer": "Yes. We can suggest material swaps, insulation, and design tweaks to improve sustainability without a full redesign." }
+      ]
+    }
+  ]
+}

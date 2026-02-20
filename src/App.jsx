@@ -8,6 +8,9 @@ import ServicesPage from './pages/ServicesPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import BlogPage from './pages/BlogPage'
+import BlogPostPage from './pages/BlogPostPage'
+import ServiceDetailPage from './pages/ServiceDetailPage'
+import ProjectDetailPage from './pages/ProjectDetailPage'
 
 function Layout({ children }) {
   return (
@@ -29,9 +32,12 @@ export default function App() {
         <Route path="/" element={<Layout><HomePage /></Layout>} />
         <Route path="/about" element={<Layout><AboutPage /></Layout>} />
         <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
+        <Route path="/services/:slug" element={<Layout><ServiceDetailPage /></Layout>} />
         <Route path="/projects" element={<Layout><ProjectsPage /></Layout>} />
+        <Route path="/projects/:slug" element={<Layout><ProjectDetailPage /></Layout>} />
         <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
         <Route path="/blog" element={<Layout><BlogPage /></Layout>} />
+        <Route path="/blog/:slug" element={<Layout><BlogPostPage /></Layout>} />
       </Routes>
     </BrowserRouter>
   )
