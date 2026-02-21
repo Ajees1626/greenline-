@@ -46,38 +46,38 @@ export default function AboutSection({ isAboutPage } = {}) {
   }, [])
 
   return (
-    <section id="about" ref={sectionRef} className="bg-white py-12 sm:py-16 md:py-24 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
+    <section id="about" ref={sectionRef} className="bg-white py-10 sm:py-12 md:py-16 lg:py-24 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-16 items-center">
           {/* Left: text with letter/line animation */}
           <div
             ref={textRef}
-            className={`transition-all duration-700 ease-out ${
+            className={`order-last md:order-0 transition-all duration-700 ease-out ${
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <p className="font-body text-sm font-semibold text-brand uppercase tracking-wider mb-2">
+            <p className="font-body text-xs sm:text-sm font-semibold text-brand uppercase tracking-wider mb-2">
               Who We Are
             </p>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark">
+            <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-text-dark leading-tight">
               Building With Purpose, Delivering With Care
             </h2>
-            <p className="mt-6 text-text-dark/80 font-body leading-relaxed text-base sm:text-lg">
+            <p className="mt-3 sm:mt-4 text-text-dark/80 font-body text-sm sm:text-base leading-relaxed text-left sm:text-justify">
               At <strong className="text-text-dark">Greenline Developers</strong>, we transform ideas into reality by designing, building, and delivering quality homes and apartments. As a trusted construction and contracting company, we focus on every detail—from structural strength and design precision to timely execution and sustainable practices.
             </p>
-            <p className="font-heading font-semibold text-text-dark mt-6">
+            <p className="font-heading font-semibold text-text-dark mt-4 sm:mt-6 text-base sm:text-lg">
               Our Promises:
             </p>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-3 sm:mt-4 space-y-2 sm:space-y-2.5">
               {PROMISES.map((item, i) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 font-body text-text-dark/85 text-sm sm:text-base"
+                  className="flex items-start gap-2.5 sm:gap-3 font-body text-text-dark/85 text-sm sm:text-normal "
                   style={{
                     animation: inView ? `fadeInUp 0.5s ease-out ${i * 0.08}s both` : 'none',
                   }}
                 >
-                  <span className="shrink-0 w-6 h-6 rounded-full bg-brand/20 flex items-center justify-center mt-0.5">
+                  <span className="shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-brand/20 flex items-center justify-center mt-0.5">
                     <svg className="w-3.5 h-3.5 text-brand" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -91,14 +91,14 @@ export default function AboutSection({ isAboutPage } = {}) {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 sm:mt-8 inline-flex items-center min-h-[44px] px-5 sm:px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors duration-300"
+                className="mt-5 sm:mt-6 md:mt-8 inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors duration-300 touch-manipulation"
               >
                 Contact Us
               </a>
             ) : (
               <Link
                 to="/about"
-                className="mt-6 sm:mt-8 inline-flex items-center min-h-[44px] px-5 sm:px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors duration-300"
+                className="mt-5 sm:mt-6 md:mt-8 inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors duration-300 touch-manipulation"
               >
                 More About Us
               </Link>
@@ -108,15 +108,15 @@ export default function AboutSection({ isAboutPage } = {}) {
           {/* Right: 4 images 2x2 grid, center round builders icon with animation */}
           <div
             ref={imagesRef}
-            className={`relative flex justify-center items-center transition-all duration-700 delay-150 ${
+            className={`relative flex justify-center items-center transition-all duration-700 delay-150 order-first md:order-0 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'
             }`}
           >
-            <div className="relative w-full max-w-md mx-auto grid grid-cols-2 gap-2 sm:gap-3">
+            <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-lg mx-auto grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
               {ABOUT_IMAGES.map((src, i) => (
                 <div
                   key={i}
-                  className="relative aspect-square rounded-lg overflow-hidden shadow-md ring-1 ring-black/5"
+                  className="relative aspect-square rounded-md sm:rounded-lg overflow-hidden shadow-md ring-1 ring-black/5"
                   style={{
                     animation: inView ? `fadeInScale 0.5s ease-out ${0.2 + i * 0.1}s both` : 'none',
                   }}
@@ -135,12 +135,12 @@ export default function AboutSection({ isAboutPage } = {}) {
                 aria-hidden
               >
                 <div
-                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-white shadow-xl ring-4 ring-brand/30 flex items-center justify-center text-brand animate-pulse-slow"
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full bg-white shadow-xl ring-2 sm:ring-4 ring-brand/30 flex items-center justify-center text-brand animate-pulse-slow"
                   style={{
                     animation: inView ? 'iconFloat 3s ease-in-out infinite' : undefined,
                   }}
                 >
-                  <BuildersIcon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-brand" />
+                  <BuildersIcon className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 text-brand" />
                 </div>
               </div>
             </div>

@@ -1,9 +1,9 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import servicesData from '../data/services.json'
 
-const services = servicesData.services
+const services = servicesData?.services ?? []
 
-export default function ServiceDetailPage() {
+function ServiceDetailPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const service = services.find((s) => s.slug === slug)
@@ -28,19 +28,20 @@ export default function ServiceDetailPage() {
         aria-labelledby="service-hero-heading"
       >
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-fixed max-sm:bg-scroll"
+          className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: `url(${service.heroImage})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 z-[1] bg-black/60" aria-hidden />
+        <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
+        <div className="absolute inset-0 z-1 bg-primary/30" aria-hidden />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24 w-full text-center">
-          <p className="font-body text-xs sm:text-sm font-semibold text-brand uppercase tracking-widest mb-2">
+          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
             Service
           </p>
-          <h1 id="service-hero-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h1 id="service-hero-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white drop-shadow-md">
             {service.heroTitle}
           </h1>
-          <p className="mt-2 sm:mt-3 text-base sm:text-lg text-white/90 font-body max-w-2xl mx-auto px-1">
+          <p className="mt-2 sm:mt-3 text-base sm:text-lg text-white/95 font-body max-w-2xl mx-auto px-1">
             {service.heroSubtitle}
           </p>
         </div>
@@ -178,3 +179,5 @@ export default function ServiceDetailPage() {
     </div>
   )
 }
+
+export default ServiceDetailPage

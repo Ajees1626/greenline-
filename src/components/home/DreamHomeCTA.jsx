@@ -7,11 +7,11 @@ const BG_IMAGE =
 
 export default function DreamHomeCTA() {
   return (
-    <section className="relative min-h-[560px] sm:min-h-[620px] md:min-h-[720px] flex items-center overflow-hidden">
+    <section className="relative min-h-[420px] sm:min-h-[520px] md:min-h-[600px] lg:min-h-[720px] flex items-center overflow-hidden">
 
-      {/* Background – fixed on scroll (parallax); scroll on small screens */}
+      {/* Background – fixed on scroll (parallax) on all screen sizes */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed max-sm:bg-scroll"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${BG_IMAGE})` }}
         aria-hidden
       />
@@ -25,31 +25,31 @@ export default function DreamHomeCTA() {
         aria-hidden
       />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
 
         {/* Circle Container */}
         <AnimateOnView animation="fade-up" className="flex justify-center">
-        <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px]
+        <div className="relative w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px]
                         rounded-full 
                         bg-gradient-to-br from-white/15 via-white/10 to-white/5
                         backdrop-blur-2xl
                         border border-white/20
-                        shadow-[0_30px_80px_rgba(0,0,0,0.6)]
+                        shadow-[0_20px_60px_rgba(0,0,0,0.5)] sm:shadow-[0_30px_80px_rgba(0,0,0,0.6)]
                         flex items-center justify-center
-                        p-8 sm:p-10 md:p-12 text-center">
+                        p-6 sm:p-8 md:p-10 lg:p-12 text-center">
 
           {/* Subtle Glow */}
           <div className="absolute inset-0 rounded-full bg-brand/20 blur-3xl opacity-30 pointer-events-none" />
 
-          <div className="relative max-w-[360px]">
+          <div className="relative max-w-[220px] sm:max-w-[280px] md:max-w-[340px] lg:max-w-[360px]">
 
             {/* Small Label */}
-            <span className="uppercase tracking-[3px] text-xs text-brand font-semibold">
+            <span className="uppercase tracking-[2px] sm:tracking-[3px] text-[10px] sm:text-xs text-brand font-semibold">
               Luxury Living
             </span>
 
             {/* Heading – light word animation */}
-            <h2 className="mt-3 sm:mt-5 font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.15]">
+            <h2 className="mt-2 sm:mt-3 md:mt-5 font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white leading-tight">
               <AnimateWords text="Turning Your" delayStart={0} staggerMs={60} />
               <br />
               <span className="text-brand"><AnimateWords text="Dream Home" delayStart={280} staggerMs={55} /></span>
@@ -58,12 +58,12 @@ export default function DreamHomeCTA() {
             </h2>
 
             {/* Divider Line */}
-            <div className="mx-auto mt-6 h-[2px] w-16 bg-brand rounded-full" />
+            <div className="mx-auto mt-4 sm:mt-5 md:mt-6 h-[2px] w-12 sm:w-16 bg-brand rounded-full" />
 
             {/* Paragraph */}
-            <p className="mt-6 font-body text-white/80 text-sm sm:text-base leading-relaxed">
+            <p className="mt-4 sm:mt-5 md:mt-6 font-body text-white/80 text-xs sm:text-sm md:text-base leading-relaxed px-0.5 sm:px-0">
               We craft modern, sustainable homes designed for comfort,
-              safety, and timeless elegance — built to elevate everyday living.
+               
             </p>
 
             

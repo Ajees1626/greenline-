@@ -12,24 +12,24 @@ const PROJECTS = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="bg-white py-12 sm:py-16 md:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="projects" className="bg-white py-10 sm:py-12 md:py-16 lg:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
         <AnimateOnView animation="fade-up">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark text-center mb-3 sm:mb-4">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-text-dark text-center mb-2 sm:mb-3 md:mb-4 leading-tight px-2">
             Our Projects
           </h2>
-          <p className="font-body text-text-dark/80 text-center max-w-2xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base px-1">
+          <p className="font-body text-text-dark/80 text-center max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-12 text-sm sm:text-base px-2 sm:px-1 leading-relaxed">
             Quality residential projects across Chennai with modern design and timely delivery.
           </p>
         </AnimateOnView>
         <AnimateOnView animation="fade-up" delay={80}>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {PROJECTS.map((project) => (
             <div
               key={`${project.name}-${project.location}`}
-              className="group rounded-xl overflow-hidden border border-brand/10 bg-brand-light/20 hover:shadow-lg transition-shadow duration-300 relative"
+              className="group rounded-lg sm:rounded-xl overflow-hidden border border-brand/10 bg-brand-light/20 hover:shadow-lg transition-shadow duration-300 relative"
             >
-              <div className="aspect-[4/3] bg-brand/10 relative overflow-hidden">
+              <div className="aspect-4/3 bg-brand/10 relative overflow-hidden">
                 <img
                   src="https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg"
                   alt={project.name}
@@ -50,27 +50,27 @@ export default function ProjectsSection() {
                   />
                 </div>
               </div>
-              <div className="p-4 sm:p-5">
-                <h3 className="font-heading text-lg sm:text-xl font-semibold text-text-dark">
+              <div className="p-3 sm:p-4 md:p-5">
+                <h3 className="font-heading text-base sm:text-lg md:text-xl font-semibold text-text-dark leading-tight">
                   {project.name}
                 </h3>
-                <p className="mt-1 font-body text-sm text-text-dark/70 flex items-center gap-2">
-                  <span className="inline-block w-4 h-4 text-brand">
+                <p className="mt-1 sm:mt-1.5 font-body text-xs sm:text-sm text-text-dark/70 flex items-center gap-1.5 sm:gap-2">
+                  <span className="inline-block w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-brand" aria-hidden>
                     <svg fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
                   </span>
-                  {project.type}
+                  <span className="truncate">{project.type}</span>
                 </p>
-                <p className="mt-1 font-body text-sm text-text-dark/70 flex items-center gap-2">
-                  <span className="inline-block w-4 h-4 text-brand">
+                <p className="mt-1 font-body text-xs sm:text-sm text-text-dark/70 flex items-center gap-1.5 sm:gap-2">
+                  <span className="inline-block w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-brand" aria-hidden>
                     <svg fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                   </span>
-                  {project.location}
+                  <span className="truncate">{project.location}</span>
                 </p>
                 <a
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center justify-center w-full py-2.5 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors"
+                  className="mt-3 sm:mt-4 inline-flex items-center justify-center w-full min-h-[44px] py-2.5 sm:py-3 rounded-lg bg-brand text-white text-sm sm:text-base font-medium hover:bg-brand-dark transition-colors touch-manipulation"
                 >
                   Talk To Us
                 </a>

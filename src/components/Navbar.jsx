@@ -146,12 +146,12 @@ export default function Navbar() {
                 )
               )}
             </ul>
-            <Link
+            {/* <Link
               to="/projects"
               className="shrink-0 inline-flex items-center px-7 py-3 rounded-full border-2 border-secondary text-secondary font-medium transition-colors duration-300 hover:bg-secondary hover:text-white"
             >
               Explore Properties
-            </Link>
+            </Link> */}
           </div>
 
           <button
@@ -197,13 +197,13 @@ export default function Navbar() {
                 )
               )}
             </ul>
-            <Link
+            {/* <Link
               to="/projects"
               onClick={closeMobile}
               className="mt-8 inline-flex items-center justify-center w-full min-h-[48px] px-7 py-3.5 rounded-full border-2 border-secondary text-secondary font-medium hover:bg-secondary hover:text-white transition-colors duration-300 active:scale-[0.98]"
             >
               Explore Properties
-            </Link>
+            </Link> */}
           </div>
         </aside>
       </div>

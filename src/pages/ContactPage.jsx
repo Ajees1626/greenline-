@@ -33,19 +33,19 @@ export default function ContactPage() {
           style={{ backgroundImage: `url(${HERO_BG})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 z-[1] bg-black/55" aria-hidden />
-        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 bg-gradient-to-t from-white to-transparent z-[1] pointer-events-none" aria-hidden />
+        <div className="absolute inset-0 z-[1] bg-black/50" aria-hidden />
+        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 z-[1] pointer-events-none" aria-hidden />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-28 w-full text-center">
-          <p className="font-body text-sm font-semibold text-brand uppercase tracking-widest mb-3">
+          <p className="font-body inline-block bg-primary text-text-dark px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">
             Get in Touch
           </p>
           <h1
             id="contact-hero-heading"
-            className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-sm"
+            className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-md"
           >
             Contact Us
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-white/95 font-body max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-white/95 font-body max-w-2xl mx-auto">
             Have a project in mind? We&apos;d love to hear from you. Reach out via form, WhatsApp, or visit us.
           </p>
         </div>

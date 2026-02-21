@@ -85,10 +85,10 @@ export default function StatsSection() {
   }, [inView])
 
   return (
-    <section ref={sectionRef} className="bg-primary py-10 sm:py-14 md:py-20" aria-label="Key statistics">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+    <section ref={sectionRef} className="bg-primary py-6 sm:py-8 md:py-10 lg:py-12" aria-label="Key statistics">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
         <h2
-          className={`font-heading text-xl sm:text-2xl md:text-3xl font-bold text-text-dark text-center max-w-xl mx-auto leading-tight px-1 ${
+          className={`font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-text-dark text-center max-w-xl mx-auto leading-tight px-2 sm:px-1 ${
             inView ? 'animate-home-fade-in-up' : 'animate-home-initial'
           }`}
         >
@@ -96,7 +96,7 @@ export default function StatsSection() {
         </h2>
 
         <div
-          className={`mt-10 sm:mt-14 flex flex-col sm:flex-row sm:divide-x sm:divide-gray-200/80 sm:items-stretch ${
+          className={`mt-5 sm:mt-6 md:mt-8 flex flex-col divide-y divide-gray-200/70 sm:flex-row sm:divide-y-0 sm:divide-x sm:divide-gray-200/80 sm:items-stretch ${
             inView ? 'animate-home-fade-in-up' : 'animate-home-initial'
           }`}
           style={inView ? { animationDelay: '0.12s', animationFillMode: 'backwards' } : undefined}
@@ -104,28 +104,28 @@ export default function StatsSection() {
           {STATS.map(({ label, value, suffix, icon }, i) => (
             <div
               key={label}
-              className="flex flex-col items-center justify-center text-center py-6 sm:py-8 md:py-10 sm:flex-1 sm:px-4 md:px-6 lg:px-10"
+              className="flex flex-col items-center justify-center text-center py-4 sm:py-5 md:py-6 lg:py-8 sm:flex-1 px-2 sm:px-4 md:px-6 lg:px-10 min-h-[72px] sm:min-h-0"
             >
               <div
-                className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary/15 text-secondary mb-3 sm:mb-4 shrink-0"
+                className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-secondary/15 text-secondary mb-2 sm:mb-3 shrink-0"
                 aria-hidden
               >
-                <StatIcon icon={icon} className="w-5 h-5" />
+                <StatIcon icon={icon} className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <p
-                className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-text-dark tabular-nums tracking-tight"
+                className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark tabular-nums tracking-tight"
                 aria-label={`${value}${suffix} ${label}`}
               >
                 {displayValues[i]}{suffix}
               </p>
-              <p className="mt-2 text-sm font-medium text-gray-600 max-w-44 mx-auto">
+              <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm font-medium text-gray-600 max-w-[200px] sm:max-w-44 mx-auto leading-snug">
                 {label}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-14 mx-auto w-12 sm:w-16 h-1 rounded-full bg-secondary/40" aria-hidden />
+        <div className="mt-5 sm:mt-6 md:mt-8 mx-auto w-10 sm:w-12 md:w-16 h-1 rounded-full bg-secondary/40" aria-hidden />
       </div>
     </section>
   )

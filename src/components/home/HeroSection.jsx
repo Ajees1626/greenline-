@@ -35,11 +35,11 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center text-white overflow-hidden"
     >
-      {/* 4 rotating background images – fixed on scroll (parallax); scroll on small screens */}
+      {/* 4 rotating background images – fixed on scroll (parallax) on all screen sizes */}
       {HERO_BG_IMAGES.map((src, i) => (
         <div
           key={i}
-          className="absolute inset-0 z-0 bg-cover bg-center bg-fixed max-sm:bg-scroll transition-opacity duration-1000 ease-in-out"
+          className="absolute inset-0 z-0 bg-cover bg-center bg-fixed transition-opacity duration-1000 ease-in-out"
           style={{
             backgroundImage: `url(${src})`,
             opacity: i === activeIndex ? 1 : 0,

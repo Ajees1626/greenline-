@@ -4,9 +4,9 @@ import projectsData from '../data/projects.json'
 const projects = projectsData.projects
 
 const STATUS_STYLE = {
-  completed: 'bg-brand/15 text-brand border-brand/30',
-  ongoing: 'bg-amber-500/15 text-amber-700 border-amber-500/30',
-  upcoming: 'bg-blue-500/15 text-blue-700 border-blue-500/30',
+  completed: 'bg-primary text-brand border-brand/30',
+  ongoing: 'bg-amber-100 text-amber-700 border-amber-500/30',
+  upcoming: 'bg-blue-100 text-blue-700 border-blue-500/30',
 }
 
 export default function ProjectDetailPage() {
@@ -37,22 +37,23 @@ export default function ProjectDetailPage() {
         aria-labelledby="project-hero-heading"
       >
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center max-sm:bg-scroll"
+          className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: `url(${project.heroImage})` }}
           aria-hidden
         />
         <div
-          className="absolute inset-0 z-[1] bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+          className="absolute inset-0 z-1 bg-gradient-to-t from-black/80 via-black/50 to-transparent"
           aria-hidden
         />
+        <div className="absolute inset-0 z-1 bg-primary/20" aria-hidden />
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16 pt-16 sm:pt-24 text-center">
-          <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${statusStyle} border mb-3 sm:mb-4`}>
+          <span className={`inline-block px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider ${statusStyle} border mb-3 sm:mb-4`}>
             {statusLabel}
           </span>
-          <h1 id="project-hero-heading" className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 id="project-hero-heading" className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-md">
             {project.heroTitle}
           </h1>
-          <p className="mt-2 sm:mt-3 text-base sm:text-lg text-white/90 font-body max-w-2xl mx-auto px-1">
+          <p className="mt-2 sm:mt-3 text-base sm:text-lg text-white/95 font-body max-w-2xl mx-auto px-1">
             {project.heroSubtitle}
           </p>
           <p className="mt-3 sm:mt-4 flex items-center justify-center gap-2 font-body text-white/80 text-sm sm:text-base flex-wrap">
