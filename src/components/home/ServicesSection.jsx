@@ -4,9 +4,9 @@ import AnimateOnView from './AnimateOnView'
 import servicesData from '../../data/services.json'
 
 const ACCORDION_ITEMS = [
-  { title: 'Free Consultations', content: 'Guidance from our experts to plan your project.' },
-  { title: 'Creative & Smart Solutions', content: 'Custom designs that combine beauty and functionality.' },
-  { title: '24/7 Premium Support', content: 'Dedicated assistance throughout the construction journey.' },
+  { title: 'Expert Consultation', content: 'Professional guidance from experienced architects and engineers to plan and execute yourdream home or apartment project.' },
+  { title: 'Creative & Intelligent Design', content: 'Thoughtfully designed spaces that combine modern architecture, functionality, and luxuryaesthetics.' },
+  { title: 'Premium Client Support', content: 'Dedicated support and transparent communication throughout every stage of the project toensure a smooth experience.' },
 ]
 
 const services = servicesData.services
@@ -22,10 +22,12 @@ export default function ServicesSection() {
             WHAT WE OFFER
           </p>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark mb-3 sm:mb-4">
-            Construction Solutions That Transform Your Living Experience
+          Luxury Construction Solutions That Elevate Your Living Experience
           </h2>
           <p className="font-body text-text-dark/80 max-w-3xl mb-8 sm:mb-12 text-sm sm:text-base">
-            At <strong className="text-text-dark">Greenline Developers</strong>, we deliver end-to-end construction and contracting services with a strong focus on quality, durability, and timely execution.
+          At Greenline Developers, we provide complete construction and development solutions for
+ultra-luxury apartments. From planning and design to construction and project completion, our
+focus is on delivering exceptional quality, elegant design, and a premium living experience.
           </p>
         </AnimateOnView>
 

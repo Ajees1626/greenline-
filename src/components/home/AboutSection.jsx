@@ -2,10 +2,10 @@ import { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const PROMISES = [
-  'Smart Architectural Design – Innovative plans by expert architects.',
-  'Engineering Precision – Strong foundations with flawless execution.',
-  'Quality Construction – Durable builds using trusted materials.',
-  'On-Time Delivery – Projects completed exactly as promised.',
+  'Luxury Architectural Design – Elegant and modern apartment designs crafted by experienced architects.',
+  'Precision Engineering – Strong structural foundations built with advanced construction standards.',
+  'Premium Quality Construction – High-grade materials and superior craftsmanship for lasting durability.',
+  'Timely Project Delivery – We ensure every project is delivered on schedule without compromising quality',
 ]
 
 // 4 images for 2x2 grid – replace with your own
@@ -60,10 +60,17 @@ export default function AboutSection({ isAboutPage } = {}) {
               Who We Are
             </p>
             <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-text-dark leading-tight">
-              Building With Purpose, Delivering With Care
+            Building Luxury Living, Delivering Excellence
             </h2>
             <p className="mt-3 sm:mt-4 text-text-dark/80 font-body text-sm sm:text-base leading-relaxed text-left sm:text-justify">
-              At <strong className="text-text-dark">Greenline Developers</strong>, we transform ideas into reality by designing, building, and delivering quality homes and apartments. As a trusted construction and contracting company, we focus on every detail—from structural strength and design precision to timely execution and sustainable practices.
+            At Greenline Developers, we specialize in crafting ultra-luxury apartments that redefine
+modern living. From elegant architectural concepts to flawless construction, every project is
+designed to offer comfort, sophistication, and long-lasting value.
+            </p>
+            <p className="mt-3 sm:mt-4 text-text-dark/80 font-body text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+            As a trusted real estate and construction company, we focus on every detail — premium
+design, superior materials, precision engineering, and timely project delivery — ensuring
+that every home reflects elegance and exclusivity
             </p>
             <p className="font-heading font-semibold text-text-dark mt-4 sm:mt-6 text-base sm:text-lg">
               Our Promises:

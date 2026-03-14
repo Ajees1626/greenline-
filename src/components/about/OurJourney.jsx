@@ -3,30 +3,30 @@ import AnimateOnView from '../home/AnimateOnView'
 
 const MILESTONES = [
   {
-    year: '2015',
-    title: 'Foundation',
-    desc: 'Greenline Developers started with a focus on quality residential construction in Chennai.',
+    year: '2019',
+    title: 'The Beginning',
+    desc: 'Greenline Developers was founded with a vision to create high-quality residential spaces withmodern architectural design and strong construction standards.',
     image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600',
     alt: 'Construction foundation and early projects',
   },
   {
-    year: '2018',
-    title: 'Expansion',
-    desc: 'Expanded portfolio to include villas, apartments, and commercial projects with a growing team.',
+    year: '2021',
+    title: 'Growth & Expansion',
+    desc: 'The company expanded its portfolio by developing premium residential apartments and strengthening its team of architects, engineers, and construction professionals.',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600',
     alt: 'Residential and commercial expansion',
   },
   {
-    year: '2021',
-    title: 'Recognition',
-    desc: 'Recognized for on-time delivery and sustainable building practices across multiple projects.',
+    year: '2023',
+    title: 'Building Trust',
+    desc: 'Greenline Developers earned recognition for delivering well-planned projects with quality construction, transparent processes, and timely completion.',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600',
     alt: 'Award-winning project delivery',
   },
   {
-    year: '2024',
-    title: 'Today',
-    desc: 'Trusted by hundreds of families for dream homes, with ongoing projects and a commitment to excellence.',
+    year: 'Today',
+    title: 'A Trusted Name in Luxury Living',
+    desc: 'Today, Greenline Developers continues to develop ultra-luxury apartments, creating elegantliving spaces designed for comfort, sophistication, and long-term value.',
     image: 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg',
     alt: 'Greenline Developers today',
   },
@@ -73,7 +73,7 @@ export default function OurJourney() {
             Our Journey
           </h2>
           <p className="font-body text-center max-w-2xl mx-auto mb-10 sm:mb-14 text-text-dark/80 text-sm sm:text-base">
-            Milestones that shaped us into the trusted name we are today.
+          Milestones that shaped Greenline Developers into a trusted name in luxury apartment development.
           </p>
         </AnimateOnView>
 

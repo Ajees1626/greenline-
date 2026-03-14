@@ -5,7 +5,7 @@ import projectsData from '../data/projects.json'
 import { TestimonialsSection } from '../components/home'
 
 const HERO_BG = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920'
-const projects = projectsData.projects
+const projects = projectsData?.projects ?? []
 
 const FILTERS = [
   { key: 'all', label: 'All' },
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
     <>
       {/* Hero */}
       <section
-        className="relative min-h-[40vh] sm:min-h-[50vh] flex items-center justify-center text-white overflow-hidden"
+        className="relative min-h-[40vh] sm:min-h-[50vh] md:min-h-[55vh] flex items-center justify-center text-white overflow-hidden"
         aria-labelledby="projects-hero-heading"
       >
         <div
@@ -36,44 +36,44 @@ export default function ProjectsPage() {
           style={{ backgroundImage: `url(${HERO_BG})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 z-[1] bg-black/50" aria-hidden />
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-28 w-full text-center">
-          <p className="font-body inline-block bg-primary text-text-dark px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
+        <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28 w-full text-center">
+          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
             What We Build
           </p>
           <h1
             id="projects-hero-heading"
-            className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-md"
+            className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white drop-shadow-md leading-tight px-2"
           >
             Our Projects
           </h1>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-white/95 font-body max-w-2xl mx-auto px-1">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/95 font-body max-w-2xl mx-auto px-2">
             Quality residential projects across Chennai — completed, ongoing, and upcoming.
           </p>
         </div>
       </section>
 
       {/* Filter + project cards */}
-      <section className="bg-white py-12 sm:py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="bg-white py-10 sm:py-12 md:py-16 lg:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
           <AnimateOnView animation="fade-up">
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark text-center mb-3 sm:mb-4">
+            <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-text-dark text-center mb-2 sm:mb-3 md:mb-4 leading-tight px-2">
               Quality Residential Projects
             </h2>
-            <p className="font-body text-text-dark/80 text-center max-w-2xl mx-auto mb-8 sm:mb-10 text-sm sm:text-base px-1">
+            <p className="font-body text-text-dark/80 text-center max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10 text-sm sm:text-base px-2">
               Explore our completed deliveries, ongoing construction, and upcoming projects.
             </p>
           </AnimateOnView>
 
           {/* Optional filter: Completed / Ongoing / Upcoming */}
           <AnimateOnView animation="fade-up" delay={40}>
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-2 mb-8 sm:mb-12">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 md:mb-12">
               {FILTERS.map((f) => (
                 <button
                   key={f.key}
                   type="button"
                   onClick={() => setFilter(f.key)}
-                  className={`px-4 sm:px-5 py-2.5 rounded-full font-medium text-xs sm:text-sm transition-colors min-h-[44px] sm:min-h-0 ${
+                  className={`px-4 sm:px-5 py-2.5 rounded-full font-medium text-xs sm:text-sm transition-colors min-h-[44px] touch-manipulation sm:min-h-0 ${
                     filter === f.key
                       ? 'bg-brand text-white'
                       : 'bg-brand-light/50 text-text-dark hover:bg-brand-light'
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
             </div>
           </AnimateOnView>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {filtered.map((project, i) => {
               const statusMeta = STATUS_LABELS[project.status]
               return (
@@ -94,24 +94,24 @@ export default function ProjectsPage() {
                     to={`/projects/${project.slug}`}
                     className="group block rounded-xl overflow-hidden border border-brand/10 bg-white shadow-md hover:shadow-lg hover:border-brand/25 transition-all duration-300"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-4/3 overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.name}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <span
-                        className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-semibold ${statusMeta.className}`}
+                        className={`absolute top-2 right-2 sm:top-3 sm:right-3 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs font-semibold ${statusMeta.className}`}
                       >
                         {statusMeta.label}
                       </span>
                     </div>
-                    <div className="p-5">
-                      <h3 className="font-heading text-xl font-semibold text-text-dark group-hover:text-brand transition-colors">
+                    <div className="p-4 sm:p-5">
+                      <h3 className="font-heading text-lg sm:text-xl font-semibold text-text-dark group-hover:text-brand transition-colors leading-tight">
                         {project.name}
                       </h3>
-                      <p className="mt-1 font-body text-sm text-text-dark/70">{project.type}</p>
-                      <p className="mt-1 font-body text-sm text-text-dark/70 flex items-center gap-2">
+                      <p className="mt-1 font-body text-xs sm:text-sm text-text-dark/70">{project.type}</p>
+                      <p className="mt-1 font-body text-xs sm:text-sm text-text-dark/70 flex items-center gap-2">
                         <span className="text-brand">📍</span> {project.location}
                       </p>
                       <span className="mt-4 inline-flex items-center gap-1 text-brand font-medium text-sm group-hover:gap-2 transition-all">
@@ -133,19 +133,19 @@ export default function ProjectsPage() {
       </section>
 
       {/* Component 1: Why Our Projects – image left, content right, unique card layout */}
-      <section className="bg-light-bg py-16 md:py-24" aria-labelledby="projects-why-heading">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="bg-light-bg py-10 sm:py-12 md:py-16 lg:py-24" aria-labelledby="projects-why-heading">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
             <AnimateOnView animation="fade-up">
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
+                <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
                   <img
                     src="https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg"
                     alt="Quality construction and design"
-                    className="w-full aspect-[4/3] object-cover"
+                    className="w-full aspect-4/3 object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden shadow-lg border-4 border-white hidden md:block">
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-28 h-28 sm:w-40 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border-4 border-white hidden md:block">
                   <img
                     src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400"
                     alt="Residential project"
@@ -156,24 +156,24 @@ export default function ProjectsPage() {
             </AnimateOnView>
             <AnimateOnView animation="fade-up" delay={80}>
               <div>
-                <h2 id="projects-why-heading" className="font-heading text-3xl md:text-4xl font-bold text-text-dark">
+                <h2 id="projects-why-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark leading-tight">
                   Why Our Projects Stand Out
                 </h2>
-                <p className="mt-4 font-body text-text-dark/80 leading-relaxed">
+                <p className="mt-3 sm:mt-4 font-body text-text-dark/80 leading-relaxed text-sm sm:text-base">
                   Every Greenline project is built with the same focus: strong foundations, clear timelines, and finishes that last. We keep you informed at every stage so you can plan with confidence.
                 </p>
-                <ul className="mt-8 space-y-4">
+                <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
                   {[
                     { title: 'On-time handover', desc: 'Clear schedules and regular updates so you know exactly when to move in.', img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=200' },
                     { title: 'Quality materials', desc: 'We use trusted brands and strict quality checks for durability and safety.', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=200' },
                   ].map((item, i) => (
-                    <li key={i} className="flex gap-4 p-4 rounded-xl bg-white border border-brand/10 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="shrink-0 w-20 h-20 rounded-lg overflow-hidden">
+                    <li key={i} className="flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white border border-brand/10 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden">
                         <img src={item.img} alt="" className="w-full h-full object-cover" />
                       </div>
                       <div>
-                        <h3 className="font-heading font-semibold text-text-dark">{item.title}</h3>
-                        <p className="mt-1 font-body text-sm text-text-dark/75">{item.desc}</p>
+                        <h3 className="font-heading font-semibold text-text-dark text-sm sm:text-base">{item.title}</h3>
+                        <p className="mt-1 font-body text-xs sm:text-sm text-text-dark/75">{item.desc}</p>
                       </div>
                     </li>
                   ))}
@@ -185,7 +185,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Component 2: Locations & Reach – full-width image strip + overlay content, different layout */}
-      <section className="relative py-16 md:py-24 overflow-hidden" aria-labelledby="projects-locations-heading">
+      <section className="relative py-10 sm:py-12 md:py-16 lg:py-24 overflow-hidden" aria-labelledby="projects-locations-heading">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920"
@@ -194,45 +194,45 @@ export default function ProjectsPage() {
           />
           <div className="absolute inset-0 bg-text-dark/75" aria-hidden />
         </div>
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
           <AnimateOnView animation="fade-up">
-            <h2 id="projects-locations-heading" className="font-heading text-3xl md:text-4xl font-bold text-white text-center mb-4">
+            <h2 id="projects-locations-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-3 sm:mb-4 leading-tight px-2">
               Locations & Reach
             </h2>
-            <p className="font-body text-white/90 text-center max-w-2xl mx-auto mb-12">
-              Our projects are spread across Chennai and nearby areas — Pozhichalur, Kundrathur, Karaima Nagar, and more. Good connectivity and trusted neighbourhoods.
+            <p className="font-body text-white/90 text-center max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12 text-sm sm:text-base px-2">
+              Our projects are spread across Chennai and nearby areas — Pozhichalur, Kundrathur, Pammal, and more. Good connectivity and trusted neighbourhoods.
             </p>
           </AnimateOnView>
           <AnimateOnView animation="fade-up" delay={60}>
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
-                { location: 'Pozhichalur', count: 'Multiple projects', image: 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg' },
-                { location: 'Kundrathur', count: 'Upcoming & planned', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600' },
-                { location: 'Karaima Nagar', count: 'Ongoing construction', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600' },
-              ].map((item, i) => (
+                { location: 'Pozhichalur', count: 'Completed & ongoing', image: 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg' },
+                { location: 'Kundrathur', count: 'Upcoming — Manikandan Nagar', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600' },
+                { location: 'Pammal', count: 'Upcoming — VOC Nagar', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600' },
+              ].map((item) => (
                 <div
                   key={item.location}
                   className="group rounded-xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
                 >
-                  <div className="aspect-[3/2] overflow-hidden">
+                  <div className="aspect-3/2 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.location}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-4 text-white">
-                    <h3 className="font-heading font-semibold text-lg">{item.location}</h3>
-                    <p className="mt-1 font-body text-sm text-white/85">{item.count}</p>
+                  <div className="p-3 sm:p-4 text-white">
+                    <h3 className="font-heading font-semibold text-base sm:text-lg">{item.location}</h3>
+                    <p className="mt-1 font-body text-xs sm:text-sm text-white/85">{item.count}</p>
                   </div>
                 </div>
               ))}
             </div>
           </AnimateOnView>
-          <div className="mt-10 text-center">
+          <div className="mt-8 sm:mt-10 text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand text-white font-semibold hover:bg-brand-dark transition-colors"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 sm:px-6 py-3 rounded-xl bg-brand text-white text-sm sm:text-base font-semibold hover:bg-brand-dark transition-colors touch-manipulation"
             >
               Enquire about a location
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

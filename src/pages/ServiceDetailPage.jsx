@@ -33,15 +33,14 @@ function ServiceDetailPage() {
           aria-hidden
         />
         <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
-        <div className="absolute inset-0 z-1 bg-primary/30" aria-hidden />
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24 w-full text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24 w-full text-center">
           <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
             Service
           </p>
-          <h1 id="service-hero-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white drop-shadow-md">
+          <h1 id="service-hero-heading" className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-white drop-shadow-md leading-tight px-2">
             {service.heroTitle}
           </h1>
-          <p className="mt-2 sm:mt-3 text-base sm:text-lg text-white/95 font-body max-w-2xl mx-auto px-1">
+          <p className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg text-white/95 font-body max-w-2xl mx-auto px-2">
             {service.heroSubtitle}
           </p>
         </div>
@@ -50,30 +49,30 @@ function ServiceDetailPage() {
       {/* Main layout: left 75% scrollable, right 25% fixed */}
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
         {/* Left: 75% – scrollable content */}
-        <div className="w-full lg:w-3/4 lg:pr-6 xl:pr-8 py-10 sm:py-12 md:py-16 px-4 sm:px-6">
+        <div className="w-full lg:w-3/4 lg:pr-6 xl:pr-8 py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8">
           <div className="max-w-3xl">
             {/* Content image */}
-            <div className="rounded-xl overflow-hidden shadow-lg mb-8 sm:mb-10">
+            <div className="rounded-xl overflow-hidden shadow-lg mb-6 sm:mb-8 md:mb-10">
               <img
                 src={service.image}
                 alt={service.title}
                 className="w-full aspect-video object-cover"
               />
             </div>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark">
+            <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-text-dark leading-tight">
               {service.title}
             </h2>
-            <p className="mt-4 sm:mt-6 font-body text-text-dark/80 leading-relaxed text-base sm:text-lg">
+            <p className="mt-3 sm:mt-4 md:mt-6 font-body text-text-dark/80 leading-relaxed text-sm sm:text-base md:text-lg">
               {service.paragraph1}
             </p>
-            <p className="mt-6 font-body text-text-dark/80 leading-relaxed text-lg">
+            <p className="mt-4 sm:mt-5 md:mt-6 font-body text-text-dark/80 leading-relaxed text-sm sm:text-base md:text-lg">
               {service.paragraph2}
             </p>
-            <ul className="mt-8 space-y-3">
+            <ul className="mt-6 sm:mt-8 space-y-2 sm:space-y-3">
               {service.listItems.map((item) => (
-                <li key={item} className="flex items-start gap-3 font-body text-text-dark/85">
-                  <span className="shrink-0 w-6 h-6 rounded-full bg-brand/20 flex items-center justify-center mt-0.5">
-                    <svg className="w-3.5 h-3.5 text-brand" fill="currentColor" viewBox="0 0 20 20">
+                <li key={item} className="flex items-start gap-2 sm:gap-3 font-body text-text-dark/85 text-sm sm:text-base">
+                  <span className="shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-brand/20 flex items-center justify-center mt-0.5">
+                    <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>

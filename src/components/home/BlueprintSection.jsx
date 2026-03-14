@@ -10,11 +10,18 @@ export default function BlueprintSection() {
           <AnimateOnView animation="fade-up">
           <div>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark">
-              From Blueprint to Reality, We Build with Precision
+            From Vision to Luxury Living, Built with Precision
             </h2>
             <p className="mt-4 sm:mt-6 font-body text-text-dark/80 text-sm sm:text-base">
-              At <strong className="text-text-dark">Greenline Developers</strong>, we combine engineering expertise, skilled workforce, and quality materials to deliver projects that are durable, modern, and future-ready. Our focus is on timely execution and transparent processes, making construction stress-free for our clients.
+            At Greenline Developers, we transform visionary concepts into ultra-luxury living spaces
+through expert engineering, skilled craftsmanship, and premium construction materials. Every
+project is thoughtfully planned and executed to deliver modern design, structural strength, and
+long-lasting value.
             </p>
+            <p className="mt-4 sm:mt-6 font-body text-text-dark/80 text-sm sm:text-base">
+            With a strong commitment to timely delivery, transparency, and superior construction
+standards, we ensure a seamless and stress-free experience for our clients while creating
+homes that reflect elegance, comfort, and prestige.            </p>
             <a
               href={WHATSAPP_LINK}
               target="_blank"

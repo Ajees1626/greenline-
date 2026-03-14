@@ -9,7 +9,7 @@ export default function AboutPage() {
     <>
       {/* About page hero */}
       <section
-        className="relative min-h-[40vh] sm:min-h-[50vh] flex items-center justify-center text-white overflow-hidden"
+        className="relative min-h-[40vh] sm:min-h-[50vh] md:min-h-[55vh] flex items-center justify-center text-white overflow-hidden"
         aria-labelledby="about-hero-heading"
       >
         <div
@@ -17,18 +17,18 @@ export default function AboutPage() {
           style={{ backgroundImage: `url(${HERO_BG})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 z-[1] bg-black/50" aria-hidden />
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-28 w-full text-center">
-          <p className="font-body inline-block bg-primary text-text-dark px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
+        <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28 w-full text-center">
+          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
             Who We Are
           </p>
           <h1
             id="about-hero-heading"
-            className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-md"
+            className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white drop-shadow-md leading-tight px-2"
           >
             About Greenline Developers
           </h1>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-white/95 font-body max-w-2xl mx-auto px-1">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/95 font-body max-w-2xl mx-auto px-2">
             Building with purpose, delivering with care — quality homes and trusted construction.
           </p>
         </div>

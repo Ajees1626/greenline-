@@ -33,39 +33,39 @@ export default function ContactPage() {
           style={{ backgroundImage: `url(${HERO_BG})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 z-[1] bg-black/50" aria-hidden />
-        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 z-[1] pointer-events-none" aria-hidden />
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-28 w-full text-center">
-          <p className="font-body inline-block bg-primary text-text-dark px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">
+        <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
+        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 z-1 pointer-events-none" aria-hidden />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28 w-full text-center">
+          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
             Get in Touch
           </p>
           <h1
             id="contact-hero-heading"
-            className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-md"
+            className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white drop-shadow-md leading-tight px-2"
           >
             Contact Us
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-white/95 font-body max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/95 font-body max-w-2xl mx-auto px-2">
             Have a project in mind? We&apos;d love to hear from you. Reach out via form, WhatsApp, or visit us.
           </p>
         </div>
       </section>
 
       {/* Form + Contact: two white cards on light green – Send a message | Image + Contact details */}
-      <section className="bg-light-bg py-12 sm:py-16 md:py-24" aria-labelledby="contact-form-heading">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-stretch">
+      <section className="bg-light-bg py-10 sm:py-12 md:py-16 lg:py-24" aria-labelledby="contact-form-heading">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 md:gap-8 lg:gap-10 items-stretch">
             {/* Left card: Send a message form */}
             <AnimateOnView animation="fade-up">
-              <div className="rounded-2xl bg-white shadow-lg border border-white overflow-hidden p-5 sm:p-6 md:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-11 h-11 rounded-full bg-brand/20 flex items-center justify-center shrink-0">
+              <div className="rounded-xl sm:rounded-2xl bg-white shadow-lg border border-white overflow-hidden p-4 sm:p-5 md:p-6 lg:p-8">
+                <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-brand/20 flex items-center justify-center shrink-0">
                     <svg className="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <h2 id="contact-form-heading" className="font-heading text-2xl font-bold text-text-dark">
+                    <h2 id="contact-form-heading" className="font-heading text-xl sm:text-2xl font-bold text-text-dark leading-tight">
                       Send a message
                     </h2>
                     <p className="font-body text-sm text-text-dark/60 mt-0.5">
