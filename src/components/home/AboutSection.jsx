@@ -10,10 +10,10 @@ const PROMISES = [
 
 // 4 images for 2x2 grid – replace with your own
 const ABOUT_IMAGES = [
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600',
-  'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600',
-  'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600',
-  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600',
+  '/images/w1.webp',
+  '/images/w2.webp',
+  '/images/w3.webp',
+  '/images/w4.webp',
 ]
 
 function BuildersIcon({ className = 'w-12 h-12' }) {

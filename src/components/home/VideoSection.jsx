@@ -8,21 +8,22 @@ const CARDS = [
   {
     title: 'End-to-End Construction',
     desc: 'From blueprint to handover, we manage the entire process with precision.',
-    image: 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/young-couple-holding-tablet-with-advertisement-of-real-estate-on-sale.jpg',
+    image: '/images/v1.webp',
     alt: 'Couple reviewing real estate plans',
   },
   {
     title: 'Expert Guidance',
     desc: 'Our engineers and specialists provide clear consultations to make your project stress-free.',
-    image: 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/real-estate-agent.jpg',
+    image: '/images/v2.webp',
     alt: 'Real estate professional consultation',
   },
   {
     title: 'Quality & Comfort',
     desc: 'We blend durable construction with modern designs for lasting family comfort.',
-    image: 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/real-estate-sale-and-happy-family-outside-of-new-house-excited-and-smiling-in-a-garden-property-.jpg',
+    image: '/images/v3.webp',
     alt: 'Family outside new home',
   },
+  
 ]
 
 const focusRing =
