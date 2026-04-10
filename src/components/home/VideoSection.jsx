@@ -2,25 +2,25 @@ import AnimateOnView from './AnimateOnView'
 
 const WHATSAPP_LINK = 'https://wa.me/918939555025'
 
-const VIDEO_URL = 'https://cdn.coverr.co/videos/coverr-construction-site-aerial-view-4694151/4694151-4c1f4a0f7c/1080p/preview.mp4'
+const VIDEO_URL = 'https://res.cloudinary.com/dzhtbcxhw/video/upload/q_auto/f_auto/v1775824565/videoplayback_gq38md.mp4'
 
 const CARDS = [
   {
     title: 'End-to-End Construction',
     desc: 'From blueprint to handover, we manage the entire process with precision.',
-    image: '/images/v1.webp',
+    image: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801660/Expert_Guidance_result_flsmzn.webp',
     alt: 'Couple reviewing real estate plans',
   },
   {
     title: 'Expert Guidance',
     desc: 'Our engineers and specialists provide clear consultations to make your project stress-free.',
-    image: '/images/v2.webp',
+    image: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801659/End-to-End_Construction_result_wtjwrh.webp',
     alt: 'Real estate professional consultation',
   },
   {
     title: 'Quality & Comfort',
     desc: 'We blend durable construction with modern designs for lasting family comfort.',
-    image: '/images/v3.webp',
+    image: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801658/Building_Homes_Today_result_beuqjb.webp',
     alt: 'Family outside new home',
   },
   

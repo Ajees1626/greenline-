@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink as RouterNavLink } from 'react-router-dom'
 
+const LOGO_URL =
+  'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775824556/Untitled-2-02_prhucf.webp'
+
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About us' },
@@ -49,9 +52,14 @@ export default function Navbar() {
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 lg:h-18 flex items-center justify-between gap-4">
           <Link
             to="/"
-            className="font-heading text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-tight text-black hover:text-secondary transition-colors duration-300 shrink-0"
+            className="shrink-0 flex items-center py-1 hover:opacity-90 transition-opacity duration-300"
           >
-            Greenline
+            <img
+              src={LOGO_URL}
+              alt="Greenline Developers Logo"
+              className="h-8 sm:h-9 lg:h-10 w-auto max-h-10 max-w-[min(200px,55vw)] object-contain object-left"
+              decoding="async"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-6 xl:gap-10 tracking-wide">

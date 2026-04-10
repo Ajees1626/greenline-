@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+const LOGO_URL =
+  'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775824556/Untitled-2-02_prhucf.webp'
+
 const QUICK_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About Us' },
@@ -43,8 +46,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="font-heading text-xl font-bold text-text-dark hover:text-secondary transition-colors">
-              Greenline Developers
+            <Link to="/" className="inline-block hover:opacity-90 transition-opacity shrink-0">
+              <img
+                src={LOGO_URL}
+                alt="Greenline Developers Logo"
+                className="h-10 sm:h-11 w-auto max-h-12 max-w-[min(240px,85vw)] object-contain object-left"
+                decoding="async"
+              />
             </Link>
             <div className="mt-3 h-0.5 w-12 bg-secondary/80 rounded-full" aria-hidden />
             <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-sm">
