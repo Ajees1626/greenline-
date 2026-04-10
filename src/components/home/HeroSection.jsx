@@ -6,22 +6,26 @@ const WHATSAPP_LINK = 'https://wa.me/918939555025'
 
 const HERO_SLIDES = [
   {
-    rightImage: '/images/b1.1.webp',
-    titleLines: ['Luxury Lifestyle', 'Redefined'],
+    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801640/banner-01_result_ynlf1g.webp',
+    rightTransparent: true,
+    compactSpacing: true,
+    titleLines: ['Luxury Living', 'Perfectly Redefined'],
     subtitle:
-      'We build homes that blend modern design, quality construction, and lasting value for families seeking comfort and trust.',
+      'We build homes blending modern design, quality construction, and lasting value for families seeking comfort and trust.',
   },
   {
-    rightImage: '/images/b2.webp',
+    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801638/banner-02_result_palzig.webp',
+    rightTransparent: true,
     titleLines: ['Trusted Spaces.', 'Timeless Value.'],
     subtitle:
       'From concept to completion, we deliver quality, transparency, and long-term value for every client.',
   },
   {
-    rightImage: '/images/b3.webp',
-    titleLines: ['85L Onwards', 'Book Your Dream Home'],
+    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801638/banner-03_result_mxokuf.webp',
+    rightTransparent: true,
+    titleLines: ['Book Your Dream Home'],
     subtitle:
-      'AREA: 1310 SQ.FT to 1436 SQ.FT\nUP TO 90% Bank Loan Assistance\nSpecial Offers Starting from ₹2 Lakhs',
+      'Starting from 85L, spacious homes with bank loan support, exclusive offers, and premium area options available.',
   },
 ]
 
@@ -39,33 +43,31 @@ export default function HeroSection() {
   }, [])
 
   const slide = HERO_SLIDES[activeIndex]
+  const compact = Boolean(slide.compactSpacing)
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col lg:flex-row items-center overflow-hidden bg-linear-to-b from-sky-200 via-sky-100 to-white">
-      {/* Sky + cloud background */}
-      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
-        <div className="absolute inset-0 bg-linear-to-b from-sky-200/90 via-sky-100/80 to-white/90" />
-        <div
-          className="absolute top-[8%] left-[6%] h-10 w-24 rounded-full bg-white/70 blur-[1px]"
-          style={{ boxShadow: '42px 10px 0 -10px rgba(255,255,255,0.65), 20px -6px 0 -8px rgba(255,255,255,0.6)' }}
-        />
-        <div
-          className="absolute top-[18%] right-[10%] h-12 w-28 rounded-full bg-white/65 blur-[1px]"
-          style={{ boxShadow: '44px 10px 0 -10px rgba(255,255,255,0.55), 18px -8px 0 -8px rgba(255,255,255,0.5)' }}
-        />
-        <div
-          className="absolute bottom-[24%] left-[12%] h-9 w-20 rounded-full bg-white/60"
-          style={{ boxShadow: '34px 8px 0 -8px rgba(255,255,255,0.52)' }}
-        />
-        <div
-          className="absolute bottom-[16%] right-[22%] h-10 w-24 rounded-full bg-white/55"
-          style={{ boxShadow: '36px 8px 0 -8px rgba(255,255,255,0.48)' }}
-        />
+    <section className="relative flex flex-col lg:flex-row items-stretch overflow-hidden bg-neutral-200 min-h-[82vh] sm:min-h-[86vh] lg:min-h-[90vh]">
+      {/* Full-bleed background photo with smooth fade */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
+        {HERO_SLIDES.map((item, i) => (
+          <img
+            key={item.backgroundImage}
+            src={item.backgroundImage}
+            alt=""
+            className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ease-in-out ${
+              activeIndex === i ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+            }`}
+          />
+        ))}
       </div>
 
       {/* LEFT CONTENT */}
-      <div className="flex-1 flex items-center px-6 md:px-12 py-12 z-10">
-        <div className="max-w-xl">
+      <div
+        className={`relative z-10 flex-1 flex items-center px-6 md:px-12 ${
+          compact ? 'py-5 sm:py-6 lg:py-8' : 'py-10 lg:py-12'
+        }`}
+      >
+        <div className="max-w-xl rounded-2xl bg-white/82 px-5 sm:px-6 md:px-8 py-5 sm:py-6 md:py-7">
 
           {/* TITLE */}
           <h1
@@ -127,16 +129,23 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* RIGHT IMAGE */}
-      <div className="flex-1 flex justify-center items-center px-6 py-10">
-        <div className="w-full max-w-xl h-[400px] md:h-[520px] overflow-hidden rounded-2xl border border-primary/20 shadow-[0_16px_40px_rgba(15,23,42,0.16)]">
-
-          <img
-            key={slide.rightImage}
-            src={slide.rightImage}
-            alt="slide"
-            className="w-full h-full object-cover animate-zoomFade"
-          />
+      {/* RIGHT IMAGE – larger, plain image only */}
+      <div
+        className={`relative z-10 flex-1 lg:flex-[1.5] flex justify-center lg:justify-end items-stretch min-h-0 px-3 sm:px-4 lg:py-0 lg:pr-4 xl:pr-8 lg:min-w-0 ${
+          compact ? 'py-4 sm:py-5 lg:py-0' : 'py-6 sm:py-8 lg:py-0'
+        }`}
+      >
+        <div className="w-full max-w-none lg:max-w-none lg:h-full h-[min(54vh,540px)] sm:h-[min(60vh,620px)] md:h-[min(66vh,700px)] lg:min-h-[min(88vh,860px)] xl:min-h-[min(90vh,900px)]">
+          {slide.rightTransparent ? (
+            <div className="h-full w-full bg-transparent" aria-hidden />
+          ) : (
+            <img
+              key={`${activeIndex}-${slide.rightImage}`}
+              src={slide.rightImage}
+              alt=""
+              className="h-full w-full object-cover object-center"
+            />
+          )}
         </div>
       </div>
 
@@ -153,23 +162,8 @@ export default function HeroSection() {
           }
         }
 
-        @keyframes zoomFade {
-          0% {
-            opacity: 0;
-            transform: scale(1.1);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-
         .animate-fadeSlide {
           animation: fadeSlide 0.8s ease forwards;
-        }
-
-        .animate-zoomFade {
-          animation: zoomFade 1s ease forwards;
         }
       `}</style>
     </section>

@@ -53,3 +53,22 @@
 .animate-home-initial {
   opacity: 0;
 }
+
+/* Hero heading block intro (Vite has no styled-jsx; keep animation in global CSS) */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-hero-fade-up {
+  animation: hero-fade-up 0.65s ease-out forwards;
+}
+.animate-hero-fade-up-delay {
+  animation: hero-fade-up 0.65s ease-out 0.12s forwards;
+  opacity: 0;
+}

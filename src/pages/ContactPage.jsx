@@ -2,9 +2,9 @@ import { useState } from 'react'
 import AnimateOnView from '../components/home/AnimateOnView'
 
 const WHATSAPP_LINK = 'https://wa.me/918939555025'
-const HERO_BG = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920'
-const IMG_OFFICE = 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/young-couple-holding-tablet-with-advertisement-of-real-estate-on-sale.jpg'
-const IMG_SUPPORT = 'https://greenlinedevelopers.in/wp-content/uploads/2025/09/real-estate-agent.jpg'
+const HERO_BG = 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801885/Contact_Us_banner_result_xvlmai.webp'
+const IMG_OFFICE = 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801888/Frequently_asked_questions_result_byw6os.webp'
+const IMG_SUPPORT = 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801886/contact_result_oldhhx.webp'
 const IMG_MAP_PREVIEW = 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800'
 
 const ADDRESS = 'No.03, 1st cross street, Krishna nagar, Pammal, Chennai-600075'
@@ -36,7 +36,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
         <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 z-1 pointer-events-none" aria-hidden />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28 w-full text-center">
-          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
+          <p className="font-body inline-block bg-white/95 text-text-dark px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-[0.16em] mb-3 sm:mb-4 border border-white/70 shadow-md">
             Get in Touch
           </p>
           <h1
@@ -133,11 +133,11 @@ export default function ContactPage() {
             {/* Right card: image on top, contact details below (single card) */}
             <AnimateOnView animation="fade-up" delay={80}>
               <div className="rounded-2xl bg-white shadow-lg border border-white overflow-hidden flex flex-col h-full">
-                <div className="flex-1 min-h-[200px] overflow-hidden">
+                <div className="h-[220px] sm:h-[260px] md:h-[300px] overflow-hidden">
                   <img
                     src={IMG_OFFICE}
                     alt="Discuss your project with us"
-                    className="w-full h-full object-cover aspect-[4/3] md:aspect-auto md:min-h-[220px]"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-6 md:p-7 border-t border-brand/10">
@@ -196,7 +196,7 @@ export default function ContactPage() {
                   Krishna Nagar, Pammal, Chennai-600075. Drop in or get directions below.
                 </p>
               </div>
-              <div className="md:w-3/5 rounded-xl overflow-hidden shadow-lg ring-1 ring-black/5 aspect-video max-h-[200px] md:max-h-none">
+              <div className="md:w-3/5 rounded-xl overflow-hidden shadow-lg ring-1 ring-black/5 h-[180px] sm:h-[220px] md:h-[240px] lg:h-[260px]">
                 <img
                   src={IMG_MAP_PREVIEW}
                   alt="Location"
@@ -234,7 +234,7 @@ export default function ContactPage() {
                 <img
                   src={IMG_SUPPORT}
                   alt="We're here to help"
-                  className="w-full aspect-[4/5] object-cover"
+                  className="w-full h-[260px] sm:h-[320px] lg:h-[360px] object-cover"
                 />
                 <div className="bg-white p-5 text-center">
                   <p className="font-heading font-semibold text-text-dark">Questions?</p>

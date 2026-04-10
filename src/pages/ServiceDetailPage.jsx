@@ -34,7 +34,7 @@ function ServiceDetailPage() {
         />
         <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24 w-full text-center">
-          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
+          <p className="font-body inline-block bg-white/95 text-text-dark px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-[0.16em] mb-3 sm:mb-4 border border-white/70 shadow-md">
             Service
           </p>
           <h1 id="service-hero-heading" className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-white drop-shadow-md leading-tight px-2">

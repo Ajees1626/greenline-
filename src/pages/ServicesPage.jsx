@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import AnimateOnView from '../components/home/AnimateOnView'
 import servicesData from '../data/services.json'
 
-const HERO_BG = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920'
+const HERO_BG = 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801977/Our_Services_banner_result_dhd2pi.webp'
 const services = servicesData?.services ?? []
 
 export default function ServicesPage() {
@@ -20,7 +20,7 @@ export default function ServicesPage() {
         />
         <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28 w-full text-center">
-          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
+          <p className="font-body inline-block bg-white/95 text-text-dark px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-[0.16em] mb-3 sm:mb-4 border border-white/70 shadow-md">
             What We Offer
           </p>
           <h1
@@ -135,7 +135,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg"
+                  src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801975/Real_Estate_result_wrhdxo.webp"
                   alt="Residential real estate"
                   className="w-full aspect-video object-cover"
                 />

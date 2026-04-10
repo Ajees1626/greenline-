@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from 'react'
 
 const STATS = [
-  { label: 'Ongoing Projects', value: 5, suffix: '+', icon: 'home' },
+  { label: 'Quality Materials', value: 100, suffix: '%', icon: 'home' },
+  { label: 'On-Time Delivery', value: 99, suffix: '%', icon: 'engineers' },
   { label: 'Client Satisfaction', value: 95, suffix: '%', icon: 'users' },
-  { label: 'Expert Engineers', value: 20, suffix: '+', icon: 'engineers' },
 ]
 
 const DURATION_MS = 2000

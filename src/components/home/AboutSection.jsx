@@ -10,10 +10,10 @@ const PROMISES = [
 
 // 4 images for 2x2 grid – replace with your own
 const ABOUT_IMAGES = [
-  '/images/w1.webp',
-  '/images/w2.webp',
-  '/images/w3.webp',
-  '/images/w4.webp',
+  'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801758/Who_we_are_1_result_eqnpsl.webp',
+  'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801758/Who_we_are_2_result_vqixpn.webp',
+  'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801760/Who_we_are_3_result_bsjnx8.webp',
+  'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801759/Who_we_are_4_result_awiufe.webp',
 ]
 
 function BuildersIcon({ className = 'w-12 h-12' }) {

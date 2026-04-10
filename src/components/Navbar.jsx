@@ -1,19 +1,11 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, NavLink as RouterNavLink } from 'react-router-dom'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About us' },
   { to: '/services', label: 'Services' },
-  {
-    label: 'Our Projects',
-    dropdown: [
-      { to: '/projects', label: 'Nehru Nagar' },
-      { to: '/projects', label: 'Lakshmi Nagar' },
-      { to: '/projects', label: 'Venkateshwara Nagar' },
-      { to: '/projects', label: 'Karaima Nagar' },
-    ],
-  },
+  { to: '/projects', label: 'Our Projects' },
   { to: '/contact', label: 'Contact Us' },
   { to: '/blog', label: 'Blog' },
 ]
@@ -38,72 +30,8 @@ function NavLink({ to, label, onClick, isMobile }) {
   )
 }
 
-function ProjectsDropdown({ label: dropdownLabel, items, isOpen, onClose, onOpen, onToggle, isMobile }) {
-  const ref = useRef(null)
-
-  useEffect(() => {
-    if (!isMobile || !isOpen) return
-    function handleClickOutside(e) {
-      if (ref.current && !ref.current.contains(e.target)) onClose()
-    }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [isMobile, isOpen, onClose])
-
-  if (isMobile) {
-    return (
-      <li className="border-b border-gray-200" ref={ref}>
-        <button
-          type="button"
-          onClick={onToggle}
-          className="font-body font-medium text-gray-800 text-lg py-4 min-h-[48px] w-full text-left flex items-center justify-between active:bg-gray-100"
-        >
-          {dropdownLabel}
-          <span className={`inline-block transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>▼</span>
-        </button>
-        <ul className={`overflow-hidden transition-all duration-300 ease-out ${isOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
-          {items.map((item) => (
-            <li key={item.label}>
-              <Link to={item.to} onClick={onClose} className="block pl-4 py-3 min-h-[44px] flex items-center text-gray-700 text-sm hover:text-secondary active:bg-gray-100 transition-colors">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </li>
-    )
-  }
-
-  return (
-    <li className="relative" ref={ref} onMouseLeave={onClose}>
-      <button
-        type="button"
-        onMouseEnter={onOpen}
-        className="group inline-flex items-center font-body font-medium text-black hover:text-secondary transition-colors duration-300 relative py-2 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-secondary after:origin-left after:scale-x-0 after:transition-transform after:duration-500 after:ease-out group-hover:after:scale-x-100"
-      >
-        {dropdownLabel}
-        <svg className={`ml-1 w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <div className={`absolute top-full left-0 pt-3 transition-all duration-300 ease-out ${isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-3'}`}>
-        <ul className="min-w-[220px] rounded-xl bg-white border border-gray-200 py-3 shadow-lg">
-          {items.map((item) => (
-            <li key={item.label}>
-              <Link to={item.to} className="block px-4 py-2.5 text-sm text-gray-800 hover:text-secondary hover:bg-secondary/10 transition-colors duration-200">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </li>
-  )
-}
-
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   useEffect(() => {
     if (mobileOpen) document.body.style.overflow = 'hidden'
@@ -113,7 +41,6 @@ export default function Navbar() {
 
   const closeMobile = () => {
     setMobileOpen(false)
-    setDropdownOpen(false)
   }
 
   return (
@@ -129,22 +56,9 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-6 xl:gap-10 tracking-wide">
             <ul className="flex items-center gap-6 xl:gap-10">
-              {NAV_LINKS.map((item) =>
-                item.dropdown ? (
-                  <ProjectsDropdown
-                    key={item.label}
-                    label={item.label}
-                    items={item.dropdown}
-                    isOpen={dropdownOpen}
-                    onClose={() => setDropdownOpen(false)}
-                    onOpen={() => setDropdownOpen(true)}
-                    onToggle={() => setDropdownOpen((v) => !v)}
-                    isMobile={false}
-                  />
-                ) : (
-                  <NavLink key={item.label} to={item.to} label={item.label} />
-                )
-              )}
+              {NAV_LINKS.map((item) => (
+                <NavLink key={item.label} to={item.to} label={item.label} />
+              ))}
             </ul>
             {/* <Link
               to="/projects"
@@ -180,22 +94,9 @@ export default function Navbar() {
         >
           <div className="p-4 sm:p-6 pt-20 pb-8 overflow-y-auto">
             <ul className="space-y-0">
-              {NAV_LINKS.map((item) =>
-                item.dropdown ? (
-                  <ProjectsDropdown
-                    key={item.label}
-                    label={item.label}
-                    items={item.dropdown}
-                    isOpen={dropdownOpen}
-                    onClose={() => setDropdownOpen(false)}
-                    onOpen={() => setDropdownOpen(true)}
-                    onToggle={() => setDropdownOpen((v) => !v)}
-                    isMobile
-                  />
-                ) : (
-                  <NavLink key={item.label} to={item.to} label={item.label} onClick={closeMobile} isMobile />
-                )
-              )}
+              {NAV_LINKS.map((item) => (
+                <NavLink key={item.label} to={item.to} label={item.label} onClick={closeMobile} isMobile />
+              ))}
             </ul>
             {/* <Link
               to="/projects"

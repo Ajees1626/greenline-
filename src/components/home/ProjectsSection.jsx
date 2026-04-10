@@ -1,14 +1,9 @@
 import AnimateOnView from './AnimateOnView'
+import projectsData from '../../data/projects.json'
 
 const WHATSAPP_LINK = 'https://wa.me/918939555025'
 
-const PROJECTS = [
-  { name: 'Lakshmi Nagar', type: 'Individual Villa', location: 'Pozhichalur' },
-  { name: 'Venkateshwara Nagar', type: '2BHK & 3BHK', location: 'Pozhichalur' },
-  { name: 'Lakshmi Nagar', type: '1BHK & 2BHK', location: 'Pozhichalur' },
-  { name: 'Karaima Nagar', type: '2BHK & 3BHK', location: 'Karaima Nagar' },
-  { name: 'Annai Therasa Nagar', type: '2BHK & 3BHK', location: 'Kundrathur' },
-]
+const PROJECTS = (projectsData?.projects ?? []).slice(0, 6)
 
 export default function ProjectsSection() {
   return (
@@ -26,12 +21,12 @@ export default function ProjectsSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {PROJECTS.map((project) => (
             <div
-              key={`${project.name}-${project.location}`}
+              key={project.id ?? `${project.name}-${project.location}`}
               className="group rounded-lg sm:rounded-xl overflow-hidden border border-brand/10 bg-brand-light/20 hover:shadow-lg transition-shadow duration-300 relative"
             >
               <div className="aspect-4/3 bg-brand/10 relative overflow-hidden">
                 <img
-                  src="https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg"
+                  src={project.image}
                   alt={project.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

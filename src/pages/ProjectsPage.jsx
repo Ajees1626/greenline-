@@ -4,7 +4,7 @@ import AnimateOnView from '../components/home/AnimateOnView'
 import projectsData from '../data/projects.json'
 import { TestimonialsSection } from '../components/home'
 
-const HERO_BG = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920'
+const HERO_BG = 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801927/Our_Projects_banner_result_k6epgl.webp'
 const projects = projectsData?.projects ?? []
 
 const FILTERS = [
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
         />
         <div className="absolute inset-0 z-1 bg-black/50" aria-hidden />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28 w-full text-center">
-          <p className="font-body inline-block bg-primary text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest mb-2 sm:mb-3">
+          <p className="font-body inline-block bg-white/95 text-text-dark px-5 py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-[0.16em] mb-3 sm:mb-4 border border-white/70 shadow-md">
             What We Build
           </p>
           <h1
@@ -140,14 +140,14 @@ export default function ProjectsPage() {
               <div className="relative">
                 <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
                   <img
-                    src="https://greenlinedevelopers.in/wp-content/uploads/2025/09/modern-house-facade-1.jpg"
+                    src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801923/Why_Our_Projects_Stand_Out_1_result_r6hsof.webp"
                     alt="Quality construction and design"
                     className="w-full aspect-4/3 object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-28 h-28 sm:w-40 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border-4 border-white hidden md:block">
                   <img
-                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400"
+                    src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801922/Why_Our_Projects_Stand_Out_2_result_hryx8d.webp"
                     alt="Residential project"
                     className="w-full h-full object-cover"
                   />
@@ -164,8 +164,8 @@ export default function ProjectsPage() {
                 </p>
                 <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
                   {[
-                    { title: 'On-time handover', desc: 'Clear schedules and regular updates so you know exactly when to move in.', img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=200' },
-                    { title: 'Quality materials', desc: 'We use trusted brands and strict quality checks for durability and safety.', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=200' },
+                    { title: 'On-time handover', desc: 'Clear schedules and regular updates so you know exactly when to move in.', img: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801926/On-time_handover_result_gn7yfd.webp' },
+                    { title: 'Quality materials', desc: 'We use trusted brands and strict quality checks for durability and safety.', img: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801928/Quality_materials_result_c4natf.webp' },
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white border border-brand/10 shadow-sm hover:shadow-md transition-shadow">
                       <div className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden">

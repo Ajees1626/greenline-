@@ -35,12 +35,12 @@ homes that reflect elegance, comfort, and prestige.            </p>
           <AnimateOnView animation="fade-up" delay={100}>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <img
-              src="https://greenlinedevelopers.in/wp-content/uploads/2025/09/real-estate-agent.jpg"
+              src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801579/demo2_result_k9rcgn.webp"
               alt=""
               className="rounded-lg sm:rounded-xl object-cover w-full aspect-[4/3]"
             />
             <img
-              src="https://greenlinedevelopers.in/wp-content/uploads/2025/09/real-estate-sale-and-happy-family-outside-of-new-house-excited-and-smiling-in-a-garden-property-.jpg"
+              src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801576/demo1_result_n5bptn.webp"
               alt=""
               className="rounded-lg sm:rounded-xl object-cover w-full aspect-[4/3] mt-6 sm:mt-8"
             />
