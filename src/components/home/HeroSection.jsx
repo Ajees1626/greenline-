@@ -48,7 +48,7 @@ export default function HeroSection() {
   const compact = Boolean(slide.compactSpacing)
 
   return (
-    <section className="relative flex flex-col md:flex-row items-stretch overflow-hidden bg-neutral-200 min-h-[82vh] sm:min-h-[86vh] lg:min-h-[90vh]">
+    <section className="relative flex flex-col lg:flex-row items-stretch overflow-hidden bg-neutral-200 min-h-[82vh] sm:min-h-[86vh] lg:min-h-[90vh]">
       {/* Full-bleed background photo with smooth fade */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
         {HERO_SLIDES.map((item, i) => (
@@ -67,16 +67,16 @@ export default function HeroSection() {
 
       {/* LEFT CONTENT */}
       <div
-        className={`relative z-10 flex-1 flex items-center px-6 md:px-12 ${
-          compact ? 'py-5 sm:py-6 lg:py-8' : 'py-10 lg:py-12'
+        className={`relative z-10 flex-1 flex items-center px-6 md:px-10 lg:px-12 ${
+          compact ? 'py-5 sm:py-6 md:py-8 lg:py-8' : 'py-10 md:py-12 lg:py-12'
         }`}
       >
-        <div className="max-w-xl rounded-2xl bg-white/82 px-5 sm:px-6 md:px-8 py-5 sm:py-6 md:py-7">
+        <div className="w-full max-w-xl md:max-w-2xl lg:max-w-xl rounded-2xl bg-white/82 px-5 sm:px-6 md:px-8 lg:px-8 py-5 sm:py-6 md:py-7 lg:py-7">
 
           {/* TITLE */}
           <h1
             key={activeIndex}
-            className="text-4xl md:text-6xl font-bold leading-tight text-text-dark animate-fadeSlide"
+            className="text-4xl md:text-6xl lg:text-6xl font-bold leading-tight text-text-dark animate-fadeSlide"
           >
             {slide.titleLines.map((line, i) => (
               <span key={i} className="block">
@@ -92,13 +92,13 @@ export default function HeroSection() {
           {/* SUBTITLE */}
           <p
             key={`sub-${activeIndex}`}
-            className="mt-6 text-lg text-text-dark/85 whitespace-pre-line animate-fadeSlide delay-100"
+            className="mt-5 md:mt-6 lg:mt-6 text-lg md:text-lg lg:text-lg text-text-dark/85 whitespace-pre-line animate-fadeSlide delay-100"
           >
             {slide.subtitle}
           </p>
 
           {/* BUTTONS */}
-          <div className="mt-8 flex gap-4 flex-wrap">
+          <div className="mt-8 md:mt-7 lg:mt-8 flex gap-4 md:gap-4 lg:gap-4 flex-wrap">
             <Link
               to="/projects"
               className="px-6 py-3 rounded-lg bg-brand text-white font-semibold hover:bg-brand-light hover:text-brand-dark transition-all duration-300"
@@ -135,11 +135,11 @@ export default function HeroSection() {
 
       {/* RIGHT IMAGE – larger, plain image only */}
       <div
-        className={`relative z-10 flex-1 md:flex-[1.15] lg:flex-[1.5] flex justify-center md:justify-end items-stretch min-h-0 px-3 sm:px-4 md:py-0 md:pr-4 xl:pr-8 md:min-w-0 ${
-          compact ? 'py-4 sm:py-5 md:py-0' : 'py-6 sm:py-8 md:py-0'
+        className={`relative z-10 flex-1 lg:flex-[1.5] flex justify-center lg:justify-end items-stretch min-h-0 px-3 sm:px-4 md:px-10 lg:px-3 md:pb-8 lg:pb-0 lg:py-0 lg:pr-4 xl:pr-8 lg:min-w-0 ${
+          compact ? 'py-4 sm:py-5 md:py-0 lg:py-0' : 'py-6 sm:py-8 md:py-0 lg:py-0'
         }`}
       >
-        <div className="w-full max-w-none lg:max-w-none lg:h-full h-[min(54vh,540px)] sm:h-[min(60vh,620px)] md:h-[min(66vh,700px)] lg:min-h-[min(88vh,860px)] xl:min-h-[min(90vh,900px)]">
+        <div className="w-full max-w-none lg:max-w-none lg:h-full h-[min(54vh,540px)] sm:h-[min(60vh,620px)] md:h-[min(40vh,420px)] lg:min-h-[min(88vh,860px)] xl:min-h-[min(90vh,900px)]">
           {slide.rightTransparent ? (
             <div className="h-full w-full bg-transparent" aria-hidden />
           ) : (
