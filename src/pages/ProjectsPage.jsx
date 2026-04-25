@@ -135,7 +135,7 @@ export default function ProjectsPage() {
       {/* Component 1: Why Our Projects – image left, content right, unique card layout */}
       <section className="bg-light-bg py-10 sm:py-12 md:py-16 lg:py-24" aria-labelledby="projects-why-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
             <AnimateOnView animation="fade-up">
               <div className="relative">
                 <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
                     className="w-full aspect-4/3 object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-28 h-28 sm:w-40 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border-4 border-white hidden md:block">
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-28 h-28 sm:w-40 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border-4 border-white hidden lg:block">
                   <img
                     src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801922/Why_Our_Projects_Stand_Out_2_result_hryx8d.webp"
                     alt="Residential project"

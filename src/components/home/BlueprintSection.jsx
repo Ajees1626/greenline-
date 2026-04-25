@@ -6,7 +6,7 @@ export default function BlueprintSection() {
   return (
     <section className="bg-white py-12 sm:py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           <AnimateOnView animation="fade-up">
           <div>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark">
@@ -37,12 +37,12 @@ homes that reflect elegance, comfort, and prestige.            </p>
             <img
               src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801579/demo2_result_k9rcgn.webp"
               alt=""
-              className="rounded-lg sm:rounded-xl object-cover w-full aspect-[4/3]"
+              className="rounded-lg sm:rounded-xl object-cover w-full aspect-4/3"
             />
             <img
               src="https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801576/demo1_result_n5bptn.webp"
               alt=""
-              className="rounded-lg sm:rounded-xl object-cover w-full aspect-[4/3] mt-6 sm:mt-8"
+              className="rounded-lg sm:rounded-xl object-cover w-full aspect-4/3 mt-6 sm:mt-8"
             />
           </div>
           </AnimateOnView>

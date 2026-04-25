@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import AnimateWords from './AnimateWords'
 
 const WHATSAPP_LINK = 'https://wa.me/918939555025'
+const HERO_MOBILE_IMAGE =
+  'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1777108016/1_mthwrn.webp'
 
 const HERO_SLIDES = [
   {
-    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801640/banner-01_result_ynlf1g.webp',
+    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1777107041/WEBsite_banner-01_result_dzihx3.webp',
     rightTransparent: true,
     compactSpacing: true,
     titleLines: ['Luxury Living', 'Perfectly Redefined'],
@@ -14,14 +16,14 @@ const HERO_SLIDES = [
       'We build homes blending modern design, quality construction, and lasting value for families seeking comfort and trust.',
   },
   {
-    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801638/banner-02_result_palzig.webp',
+    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1777107041/WEBsite_banner-01_result_dzihx3.webp',
     rightTransparent: true,
     titleLines: ['Trusted Spaces.', 'Timeless Value.'],
     subtitle:
       'From concept to completion, we deliver quality, transparency, and long-term value for every client.',
   },
   {
-    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1775801638/banner-03_result_mxokuf.webp',
+    backgroundImage: 'https://res.cloudinary.com/dzhtbcxhw/image/upload/q_auto/f_auto/v1777107041/WEBsite_banner-01_result_dzihx3.webp',
     rightTransparent: true,
     titleLines: ['Book Your Dream Home'],
     subtitle:
@@ -46,18 +48,20 @@ export default function HeroSection() {
   const compact = Boolean(slide.compactSpacing)
 
   return (
-    <section className="relative flex flex-col lg:flex-row items-stretch overflow-hidden bg-neutral-200 min-h-[82vh] sm:min-h-[86vh] lg:min-h-[90vh]">
+    <section className="relative flex flex-col md:flex-row items-stretch overflow-hidden bg-neutral-200 min-h-[82vh] sm:min-h-[86vh] lg:min-h-[90vh]">
       {/* Full-bleed background photo with smooth fade */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
         {HERO_SLIDES.map((item, i) => (
-          <img
-            key={item.backgroundImage}
-            src={item.backgroundImage}
-            alt=""
-            className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ease-in-out ${
-              activeIndex === i ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-            }`}
-          />
+          <picture key={item.backgroundImage}>
+            <source media="(max-width: 767px)" srcSet={HERO_MOBILE_IMAGE} />
+            <img
+              src={item.backgroundImage}
+              alt=""
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ease-in-out ${
+                activeIndex === i ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+              }`}
+            />
+          </picture>
         ))}
       </div>
 
@@ -131,8 +135,8 @@ export default function HeroSection() {
 
       {/* RIGHT IMAGE – larger, plain image only */}
       <div
-        className={`relative z-10 flex-1 lg:flex-[1.5] flex justify-center lg:justify-end items-stretch min-h-0 px-3 sm:px-4 lg:py-0 lg:pr-4 xl:pr-8 lg:min-w-0 ${
-          compact ? 'py-4 sm:py-5 lg:py-0' : 'py-6 sm:py-8 lg:py-0'
+        className={`relative z-10 flex-1 md:flex-[1.15] lg:flex-[1.5] flex justify-center md:justify-end items-stretch min-h-0 px-3 sm:px-4 md:py-0 md:pr-4 xl:pr-8 md:min-w-0 ${
+          compact ? 'py-4 sm:py-5 md:py-0' : 'py-6 sm:py-8 md:py-0'
         }`}
       >
         <div className="w-full max-w-none lg:max-w-none lg:h-full h-[min(54vh,540px)] sm:h-[min(60vh,620px)] md:h-[min(66vh,700px)] lg:min-h-[min(88vh,860px)] xl:min-h-[min(90vh,900px)]">

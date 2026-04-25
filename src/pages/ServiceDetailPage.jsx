@@ -46,10 +46,10 @@ function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Main layout: left 75% scrollable, right 25% fixed */}
-      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
+      {/* Main layout: stacked on mobile, split from tablet */}
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto">
         {/* Left: 75% – scrollable content */}
-        <div className="w-full lg:w-3/4 lg:pr-6 xl:pr-8 py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8">
+        <div className="w-full md:w-2/3 lg:w-3/4 md:pr-5 lg:pr-6 xl:pr-8 py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8">
           <div className="max-w-3xl">
             {/* Content image */}
             <div className="rounded-xl overflow-hidden shadow-lg mb-6 sm:mb-8 md:mb-10">
@@ -130,9 +130,9 @@ function ServiceDetailPage() {
           </div>
         </div>
 
-        {/* Right: 25% – fixed sidebar (contact + summary + Q&A) */}
-        <aside className="w-full lg:w-1/4 shrink-0 border-t lg:border-t-0 border-brand/10 pt-8 lg:pt-0">
-          <div className="lg:sticky lg:top-24 py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:pl-0 lg:pr-8">
+        {/* Right: sidebar (contact + summary + Q&A) */}
+        <aside className="w-full md:w-1/3 lg:w-1/4 shrink-0 border-t md:border-t-0 border-brand/10 pt-8 md:pt-0">
+          <div className="md:sticky md:top-24 py-8 sm:py-12 lg:py-16 px-4 sm:px-6 md:pl-0 md:pr-6 lg:pr-8">
             <div className="rounded-xl sm:rounded-2xl border border-brand/20 bg-brand-light/20 p-4 sm:p-6 space-y-4 sm:space-y-6">
               <h3 className="font-heading text-lg font-bold text-text-dark">
                 Contact & Enquiry
@@ -155,7 +155,7 @@ function ServiceDetailPage() {
                 WhatsApp Us
               </a>
             </div>
-            <div className="mt-8 rounded-2xl border border-brand/20 bg-white p-6">
+            <div className="mt-8 rounded-2xl border border-brand/20 bg-white p-4 sm:p-6">
               <h3 className="font-heading text-lg font-bold text-text-dark mb-4">
                 Quick Q&A
               </h3>

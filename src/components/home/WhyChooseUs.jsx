@@ -87,7 +87,7 @@ for modern families
         </AnimateOnView>
 
         <AnimateOnView animation="fade-up" delay={100}>
-        <div className="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {ITEMS.map(({ title, desc, icon }) => (
             <article
               key={title}

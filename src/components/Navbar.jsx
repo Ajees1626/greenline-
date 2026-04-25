@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 font-body w-full bg-white text-black shadow-sm">
-        <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 lg:h-18 flex items-center justify-between gap-4">
+        <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 md:h-18 flex items-center justify-between gap-4">
           <Link
             to="/"
             className="shrink-0 flex items-center py-1 hover:opacity-90 transition-opacity duration-300"
@@ -57,13 +57,13 @@ export default function Navbar() {
             <img
               src={LOGO_URL}
               alt="Greenline Developers Logo"
-              className="h-8 sm:h-9 lg:h-10 w-auto max-h-10 max-w-[min(200px,55vw)] object-contain object-left"
+              className="h-8 sm:h-9 md:h-10 w-auto max-h-10 max-w-[min(200px,55vw)] object-contain object-left"
               decoding="async"
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-6 xl:gap-10 tracking-wide">
-            <ul className="flex items-center gap-6 xl:gap-10">
+          <div className="hidden md:flex items-center gap-5 lg:gap-6 xl:gap-10 tracking-wide">
+            <ul className="flex items-center gap-5 lg:gap-6 xl:gap-10">
               {NAV_LINKS.map((item) => (
                 <NavLink key={item.label} to={item.to} label={item.label} />
               ))}
@@ -79,7 +79,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden min-w-[44px] min-h-[44px] p-2 rounded-lg text-black hover:bg-gray-100 active:bg-gray-200 transition-colors flex items-center justify-center"
+            className="md:hidden min-w-[44px] min-h-[44px] p-2 rounded-lg text-black hover:bg-gray-100 active:bg-gray-200 transition-colors flex items-center justify-center"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
           >
@@ -93,7 +93,7 @@ export default function Navbar() {
         </nav>
       </header>
 
-      <div className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${mobileOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} aria-hidden={!mobileOpen}>
+      <div className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${mobileOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} aria-hidden={!mobileOpen}>
         <div className="absolute inset-0 bg-black/30" onClick={closeMobile} aria-hidden />
         <aside
           className={`absolute top-0 right-0 h-full w-full max-w-[min(100vw,22rem)] sm:max-w-sm bg-white shadow-2xl flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)] ${

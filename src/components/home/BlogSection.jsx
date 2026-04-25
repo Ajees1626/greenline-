@@ -19,7 +19,7 @@ export default function BlogSection() {
           </div>
         </AnimateOnView>
         <AnimateOnView animation="fade-up" delay={80}>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {posts.map((post) => (
             <article
               key={post.slug}

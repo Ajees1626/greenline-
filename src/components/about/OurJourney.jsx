@@ -80,11 +80,11 @@ export default function OurJourney() {
         <div className="relative">
 
           {/* Center Line Track */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-brand/20 -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-brand/20 -translate-x-1/2" />
 
           {/* Animated Line Fill */}
           <div
-            className="hidden lg:block absolute left-1/2 top-0 w-[2px] bg-brand -translate-x-1/2 transition-all duration-20"
+            className="hidden md:block absolute left-1/2 top-0 w-[2px] bg-brand -translate-x-1/2 transition-all duration-20"
             style={{ height: `${lineProgress * 100}%` }}
           />
 
@@ -92,18 +92,18 @@ export default function OurJourney() {
             {MILESTONES.map((milestone, i) => (
               <AnimateOnView key={milestone.year} animation="fade-up">
                 <div
-                  className={`relative flex flex-col lg:flex-row items-center ${
-                    i % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+                  className={`relative flex flex-col md:flex-row items-center ${
+                    i % 2 !== 0 ? 'md:flex-row-reverse' : ''
                   }`}
                 >
                   {/* TEXT SIDE */}
                   <div
                     className={`flex-1 w-full ${
                       i % 2 === 0
-                        ? 'lg:pr-12 lg:text-right lg:items-end'
-                        : 'lg:pl-12 lg:text-left lg:items-start'
-                    } flex flex-col justify-center text-center lg:text-left ${
-                      i % 2 !== 0 ? 'lg:text-right' : ''
+                        ? 'md:pr-8 lg:pr-12 md:text-right md:items-end'
+                        : 'md:pl-8 lg:pl-12 md:text-left md:items-start'
+                    } flex flex-col justify-center text-center md:text-left ${
+                      i % 2 !== 0 ? 'md:text-right' : ''
                     }`}
                   >
                     <span className="font-heading text-xl sm:text-2xl font-bold text-brand">
@@ -112,18 +112,18 @@ export default function OurJourney() {
                     <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-semibold mt-1 text-text-dark">
                       {milestone.title}
                     </h3>
-                    <p className="mt-2 sm:mt-3 font-body text-text-dark/80 text-sm sm:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
+                    <p className="mt-2 sm:mt-3 font-body text-text-dark/80 text-sm sm:text-base leading-relaxed max-w-md mx-auto md:mx-0">
                       {milestone.desc}
                     </p>
                   </div>
 
                   {/* CENTER DOT */}
-                  <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-brand rounded-full border-4 border-light-bg z-10" />
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-brand rounded-full border-4 border-light-bg z-10" />
 
                   {/* IMAGE SIDE */}
                   <div
-                    className={`flex-1 w-full mt-6 sm:mt-8 lg:mt-0 ${
-                      i % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'
+                    className={`flex-1 w-full mt-6 sm:mt-8 md:mt-0 ${
+                      i % 2 === 0 ? 'md:pl-8 lg:pl-12' : 'md:pr-8 lg:pr-12'
                     }`}
                   >
                     <div className="relative rounded-xl overflow-hidden shadow-lg">

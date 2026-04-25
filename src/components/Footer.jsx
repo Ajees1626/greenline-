@@ -41,11 +41,11 @@ export default function Footer() {
         aria-hidden
       />
       {/* White overlay – keeps footer white with subtle image */}
-      <div className="absolute inset-0 z-[1] bg-white/92" aria-hidden />
+      <div className="absolute inset-0 z-1 bg-white/92" aria-hidden />
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
           {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-block hover:opacity-90 transition-opacity shrink-0">
               <img
                 src={LOGO_URL}
@@ -121,7 +121,7 @@ export default function Footer() {
           </div>
 
           {/* Contact & Newsletter */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
             <h4 className="font-heading text-sm font-semibold text-text-dark uppercase tracking-wider mb-4">
               Get in touch
             </h4>

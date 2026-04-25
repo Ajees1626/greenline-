@@ -34,9 +34,9 @@ export default function VideoSection() {
     <section className="relative py-10 sm:py-14 md:py-20" aria-labelledby="video-section-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimateOnView animation="fade-up">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-6 items-stretch min-h-0 lg:min-h-[520px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-6 items-stretch min-h-0 md:min-h-[520px]">
           {/* Left – Video in a framed block */}
-          <div className="relative order-2 lg:order-1 rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-800 min-h-[240px] sm:min-h-[320px] lg:min-h-full shadow-lg ring-1 ring-black/10">
+          <div className="relative order-2 md:order-1 rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-800 min-h-[240px] sm:min-h-[320px] md:min-h-full shadow-lg ring-1 ring-black/10">
             <video
               autoPlay
               muted
@@ -74,7 +74,7 @@ export default function VideoSection() {
           </div>
 
           {/* Right – 3 horizontal feature cards */}
-          <div className="order-1 lg:order-2 flex flex-col gap-4 sm:gap-5 justify-center py-6 lg:py-0">
+          <div className="order-1 md:order-2 flex flex-col gap-4 sm:gap-5 justify-center py-6 md:py-0">
             {CARDS.map((card) => (
               <article
                 key={card.title}

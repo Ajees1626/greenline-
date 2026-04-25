@@ -32,7 +32,7 @@ focus is on delivering exceptional quality, elegant design, and a premium living
         </AnimateOnView>
 
         <AnimateOnView animation="fade-up" delay={80}>
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-16">
             <div>
               <div className="space-y-2">
                 {ACCORDION_ITEMS.map((item, i) => (

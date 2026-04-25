@@ -15,7 +15,7 @@ const FAQ_ITEMS = [
   { q: 'What are your working hours?', a: 'We are available Monday–Saturday, 9 AM to 6 PM. You can also reach us on WhatsApp for quick queries.' },
   { q: 'How do I get a quote for my project?', a: 'Share your requirements via the form, WhatsApp, or phone. We will schedule a consultation and provide a detailed quote.' },
   { q: 'Do you offer site visits?', a: 'Yes. We can arrange a site visit or show you our completed and ongoing projects. Get in touch to fix a time.' },
-  { q: 'Where are you located?', a: 'Our office is at Krishna Nagar, Pammal, Chennai-600075. We serve Chennai and surrounding areas including Pozhichalur, Kundrathur, and Karaima Nagar.' },
+  { q: 'Where are you located?', a: 'Our office is at Krishna Nagar, Pammal, Chennai-600075. We serve Chennai and surrounding areas including Pozhichalur, Kundrathur, and Manikandan Nagar.' },
 ]
 
 export default function ContactPage() {
@@ -54,7 +54,7 @@ export default function ContactPage() {
       {/* Form + Contact: two white cards on light green – Send a message | Image + Contact details */}
       <section className="bg-light-bg py-10 sm:py-12 md:py-16 lg:py-24" aria-labelledby="contact-form-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 md:gap-8 lg:gap-10 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8 lg:gap-10 items-stretch">
             {/* Left card: Send a message form */}
             <AnimateOnView animation="fade-up">
               <div className="rounded-xl sm:rounded-2xl bg-white shadow-lg border border-white overflow-hidden p-4 sm:p-5 md:p-6 lg:p-8">
@@ -228,13 +228,13 @@ export default function ContactPage() {
       {/* FAQ – with support image and refined accordion */}
       <section className="bg-light-bg py-12 sm:py-16 md:py-24" aria-labelledby="contact-faq-heading">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-16 items-start">
-            <AnimateOnView animation="fade-up" className="lg:col-span-2">
+          <div className="grid md:grid-cols-5 gap-8 sm:gap-10 lg:gap-16 items-start">
+            <AnimateOnView animation="fade-up" className="md:col-span-2">
               <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
                 <img
                   src={IMG_SUPPORT}
                   alt="We're here to help"
-                  className="w-full h-[260px] sm:h-[320px] lg:h-[360px] object-cover"
+                  className="w-full h-[260px] sm:h-[320px] md:h-[340px] lg:h-[360px] object-cover"
                 />
                 <div className="bg-white p-5 text-center">
                   <p className="font-heading font-semibold text-text-dark">Questions?</p>
@@ -242,7 +242,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </AnimateOnView>
-            <div className="lg:col-span-3">
+            <div className="md:col-span-3">
               <AnimateOnView animation="fade-up">
                 <h2 id="contact-faq-heading" className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-text-dark mb-2">
                   Frequently asked questions
