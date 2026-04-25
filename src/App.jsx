@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import SplashCursor from './components/SplashCursor'
 import ScrollToTop from './components/ScrollToTop'
 import FloatingSocialLinks from './components/FloatingSocialLinks'
 import PageLoader from './components/PageLoader'
@@ -19,7 +18,6 @@ import ProjectDetailPage from './pages/ProjectDetailPage'
 function Layout({ children }) {
   return (
     <div className="min-h-screen flex flex-col bg-light-bg font-body">
-      <SplashCursor />
       <FloatingSocialLinks />
       <Navbar />
       <main className="flex-1 pt-14 sm:pt-16 lg:pt-[4.5rem]">
